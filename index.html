@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>On The Door — UK Nightlife Licensing Tracker</title>
+<meta name="description" content="Live tracker of UK nightlife licensing: CIP consultations, licence reviews and venue closures, aggregated weekly from individual council sources.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caveat:wght@700&family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --void:#0d0e12;
+    --panel:#17181d;
+    --panel-2:#1d1f26;
+    --line:#2a2c33;
+    --notice:#cdd9de;
+    --notice-dim:#8ea3ab;
+    --stamp:#c1493f;
+    --pulse:#d6547e;
+    --pulse-dim:#7a3a4d;
+    --loose:#3d7a52;
+    --text-hi:#ece9e4;
+    --text-lo:#84888d;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{background:var(--void);color:var(--text-hi);font-family:'Inter',sans-serif;line-height:1.55;}
+  .wrap{max-width:1000px;margin:0 auto;padding:0 24px;}
+  h1,h2,h3{font-family:'Bebas Neue',sans-serif;letter-spacing:0.02em;font-weight:400;}
+  .mono{font-family:'JetBrains Mono',monospace;}
+  a{color:inherit;}
+
+  header{border-bottom:1px solid var(--line);padding:22px 0;}
+  .header-row{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;}
+  .wordmark{font-family:'Bebas Neue',sans-serif;font-size:30px;letter-spacing:0.03em;display:flex;align-items:baseline;gap:2px;}
+  .wordmark .stamp-dot{width:9px;height:9px;background:var(--pulse);border-radius:50%;display:inline-block;margin-right:10px;box-shadow:0 0 10px var(--pulse);align-self:center;}
+  .nav-links{display:flex;gap:22px;font-size:13px;color:var(--text-lo);}
+  .nav-links a{color:var(--text-lo);text-decoration:none;}
+  .nav-links a:hover{color:var(--text-hi);}
+
+  .hero{padding:56px 0 40px;}
+  .hero-eyebrow{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--pulse);margin-bottom:14px;}
+  .hero h1{font-size:56px;line-height:1;max-width:680px;}
+  .hero-sub{color:var(--text-lo);font-size:15px;max-width:540px;margin-top:16px;}
+  .hero-sub b{color:var(--text-hi);font-weight:600;}
+
+  /* ── CHALKBOARD STATS ── */
+  .chalkboard{
+    margin-top:30px;
+    background:
+      repeating-linear-gradient(100deg, rgba(255,255,255,0.015) 0px, rgba(255,255,255,0.015) 1px, transparent 1px, transparent 3px),
+      #1c2320;
+    border:10px solid #4a3524;border-radius:2px;
+    box-shadow: inset 0 0 40px rgba(0,0,0,0.5), 0 12px 24px rgba(0,0,0,0.4);
+    padding:22px 26px;display:flex;gap:36px;flex-wrap:wrap;
+  }
+  .chalk-item{text-align:left;}
+  .chalk-num{font-family:'Caveat',cursive;font-weight:700;font-size:52px;line-height:1;color:#eef2ee;text-shadow:0 0 6px rgba(238,242,238,0.25);}
+  .chalk-num.stamp{color:#e8a09a;text-shadow:0 0 6px rgba(232,160,154,0.3);}
+  .chalk-num.pulse{color:#e9a7bf;text-shadow:0 0 6px rgba(233,167,191,0.3);}
+  .chalk-num.loose{color:#a8d4b6;text-shadow:0 0 6px rgba(168,212,182,0.3);}
+  .chalk-label{font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:0.08em;text-transform:uppercase;color:#9aa39c;margin-top:2px;}
+  .chalk-asof{width:100%;font-family:'Caveat',cursive;font-size:17px;color:#8f9c93;margin-top:-4px;}
+
+  /* ── NOTICE BOARD ── */
+  .board-section{padding:44px 0 60px;position:relative;}
+  .board{display:flex;gap:22px;overflow-x:auto;padding:30px 4px 20px;scrollbar-width:thin;}
+  .notice-card{
+    flex:0 0 250px;background:var(--notice);color:#20242a;
+    padding:18px 18px 20px;box-shadow:0 10px 24px rgba(0,0,0,0.45);
+    position:relative;font-family:'JetBrains Mono',monospace;
+  }
+  .notice-card:nth-child(1){transform:rotate(-2.5deg);}
+  .notice-card:nth-child(2){transform:rotate(1.5deg);margin-top:14px;}
+  .notice-card:nth-child(3){transform:rotate(-1deg);}
+  .notice-card:nth-child(4){transform:rotate(2deg);margin-top:10px;}
+  .notice-card:nth-child(5){transform:rotate(-1.8deg);}
+  .notice-card:nth-child(6){transform:rotate(1.2deg);margin-top:12px;}
+  .notice-card::before{
+    content:'';position:absolute;top:-8px;left:50%;transform:translateX(-50%) rotate(-8deg);
+    width:34px;height:14px;background:rgba(30,32,38,0.55);
+  }
+  .notice-head{font-size:9.5px;letter-spacing:0.1em;text-transform:uppercase;color:#4d5860;border-bottom:1px solid #8ea3ab;padding-bottom:8px;margin-bottom:10px;display:flex;justify-content:space-between;}
+  .notice-borough{font-size:16px;font-weight:700;margin-bottom:6px;color:#1a1d21;}
+  .notice-body{font-size:11.5px;color:#3a4249;line-height:1.5;margin-bottom:12px;}
+  .notice-body a{color:#3a4249;}
+  .notice-stamp{display:inline-block;font-size:10px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;padding:4px 8px;border:2px solid;transform:rotate(-4deg);}
+  .notice-stamp.review{color:var(--stamp);border-color:var(--stamp);}
+  .notice-stamp.closed{color:var(--stamp);border-color:var(--stamp);}
+  .notice-stamp.open{color:var(--loose);border-color:var(--loose);}
+  .notice-stamp.mixed{color:var(--pulse-dim);border-color:var(--pulse-dim);}
+  .notice-date{font-size:10px;color:#5c6871;margin-top:10px;}
+
+  .section-label{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-lo);margin-bottom:18px;padding-bottom:12px;border-bottom:1px solid var(--line);}
+
+  /* ── HOTSPOT MAP ── */
+  .map-section{padding:20px 0 56px;}
+  .map-layout{display:flex;gap:40px;align-items:flex-start;flex-wrap:wrap;}
+  .map-svg-wrap{flex:0 0 280px;}
+  .map-dot circle{stroke:var(--void);stroke-width:2;}
+  .map-label{font-family:'JetBrains Mono',monospace;font-size:9px;fill:var(--text-hi);}
+  .map-inset-label{font-family:'JetBrains Mono',monospace;font-size:8px;fill:var(--text-lo);letter-spacing:0.1em;}
+  .map-legend{display:flex;flex-direction:column;gap:14px;padding-top:12px;}
+  .legend-row{display:flex;align-items:center;gap:10px;font-size:13px;}
+  .legend-dot{width:11px;height:11px;border-radius:50%;flex-shrink:0;}
+  .legend-dot.tightening{background:var(--stamp);}
+  .legend-dot.stable{background:var(--notice-dim);}
+  .legend-dot.loosening{background:var(--loose);}
+  .legend-dot.mixed{background:var(--pulse);}
+  .legend-text b{display:block;font-size:13px;}
+  .legend-text span{font-size:11.5px;color:var(--text-lo);}
+  .map-note{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--text-lo);margin-top:18px;max-width:280px;line-height:1.6;}
+
+  /* ── AUTHORITY TABLE ── */
+  .table-section{padding:0 0 56px;}
+  .authority-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:12px;padding-top:6px;}
+  .authority-row{
+    background:var(--panel);border:1px solid var(--line);border-radius:3px;
+    padding:14px 16px;display:flex;flex-direction:column;gap:6px;
+  }
+  .authority-top{display:flex;justify-content:space-between;align-items:baseline;gap:10px;}
+  .authority-name{font-size:14px;font-weight:600;}
+  .dir-chip{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:0.08em;text-transform:uppercase;padding:2px 8px;border-radius:20px;white-space:nowrap;}
+  .dir-chip.tightening{color:#e8a09a;border:1px solid var(--stamp);}
+  .dir-chip.stable{color:var(--notice-dim);border:1px solid var(--notice-dim);}
+  .dir-chip.loosening{color:#8fbf9f;border:1px solid var(--loose);}
+  .dir-chip.mixed{color:#e9a7bf;border:1px solid var(--pulse);}
+  .authority-detail{font-size:11.5px;color:var(--text-lo);line-height:1.5;}
+  .authority-meta{font-family:'JetBrains Mono',monospace;font-size:9.5px;color:#5c6871;letter-spacing:0.04em;}
+  .authority-meta a{color:var(--notice-dim);text-decoration:none;}
+  .authority-meta a:hover{color:var(--text-hi);}
+
+  /* ── CLIPPINGS FEED ── */
+  .feed-section{padding:0 0 56px;}
+  .clip-board{display:flex;flex-wrap:wrap;gap:16px;padding:22px 4px 4px;}
+  .clipping{
+    flex:0 0 160px;background:var(--notice);color:#20242a;
+    padding:12px 12px 14px;font-family:'JetBrains Mono',monospace;
+    box-shadow:0 6px 14px rgba(0,0,0,0.4);position:relative;
+  }
+  .clipping:nth-child(odd){transform:rotate(-2deg);}
+  .clipping:nth-child(even){transform:rotate(1.6deg);margin-top:10px;}
+  .clipping::before{
+    content:'';position:absolute;top:-6px;left:50%;transform:translateX(-50%) rotate(-6deg);
+    width:24px;height:10px;background:rgba(30,32,38,0.5);
+  }
+  .clip-tag{font-size:8px;text-transform:uppercase;letter-spacing:0.06em;color:#4d5860;display:block;margin-bottom:5px;}
+  .clip-text{font-size:10.2px;color:#2b3238;line-height:1.4;margin-bottom:8px;}
+  .clip-foot{display:flex;justify-content:space-between;font-size:8.5px;color:#5c6871;}
+
+  /* ── PAID REPORT CTA ── */
+  .report-panel{
+    background:var(--panel);border:1px solid var(--line);border-radius:4px;
+    padding:32px;margin:20px 0 56px;display:flex;justify-content:space-between;
+    align-items:center;gap:24px;flex-wrap:wrap;
+  }
+  .report-panel h2{font-size:30px;max-width:400px;}
+  .report-panel p{color:var(--text-lo);font-size:13px;max-width:380px;margin-top:8px;}
+  .report-cta{
+    background:var(--pulse);color:#1a0d12;font-family:'JetBrains Mono',monospace;
+    font-weight:700;font-size:12px;letter-spacing:0.04em;text-transform:uppercase;
+    padding:12px 22px;border:none;border-radius:2px;cursor:pointer;white-space:nowrap;
+    text-decoration:none;display:inline-block;
+  }
+  .buyer-tags{display:flex;gap:8px;margin-top:14px;flex-wrap:wrap;}
+  .buyer-tag{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--notice-dim);border:1px solid var(--notice-dim);padding:3px 8px;border-radius:20px;}
+
+  .newsletter{text-align:center;padding:50px 0 70px;border-top:1px solid var(--line);}
+  .newsletter h2{font-size:34px;}
+  .newsletter p{color:var(--text-lo);font-size:13.5px;margin:10px auto 22px;max-width:420px;}
+  .sub-form{display:flex;gap:0;max-width:380px;margin:0 auto;border:1px solid var(--line);}
+  .sub-form input{flex:1;background:transparent;border:none;padding:13px 16px;color:var(--text-hi);font-family:'Inter',sans-serif;font-size:13px;outline:none;}
+  .sub-form button{background:var(--pulse);border:none;color:#1a0d12;font-weight:700;padding:0 20px;font-family:'JetBrains Mono',monospace;font-size:12px;text-transform:uppercase;letter-spacing:0.04em;cursor:pointer;}
+
+  footer{border-top:1px solid var(--line);padding:24px 0 40px;color:var(--text-lo);font-size:11.5px;}
+  footer p+p{margin-top:8px;}
+
+  @media (max-width:640px){
+    .hero h1{font-size:38px;}
+    .report-panel{flex-direction:column;align-items:flex-start;}
+    .chalk-num{font-size:40px;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap header-row">
+    <div class="wordmark"><span class="stamp-dot"></span>ON THE DOOR</div>
+    <div class="nav-links">
+      <a href="#board">Notices</a>
+      <a href="#map">Map</a>
+      <a href="#authorities">The 16</a>
+      <a href="#report">Quarterly Report</a>
+      <a href="#newsletter">Newsletter</a>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <section class="hero">
+    <div class="hero-eyebrow">UK Nightlife Licensing &amp; Closure Tracker</div>
+    <h1>Every licence review, every CIP consultation, every closure — before it's a headline.</h1>
+    <p class="hero-sub">200+ UK councils each run their own licensing consultations on their own schedule. We watch them so you don't have to — starting with the <b>16 highest-density nightlife authorities</b> in Britain.</p>
+
+    <div class="chalkboard" id="chalkboard"></div>
+  </section>
+
+  <section class="board-section" id="board">
+    <div class="section-label">On the door this week</div>
+    <div class="board" id="noticeBoard"></div>
+  </section>
+
+  <section class="map-section" id="map">
+    <div class="section-label">Authority watch</div>
+    <div class="map-layout">
+      <div class="map-svg-wrap">
+        <!-- Stylised GB — swap for UK local authority GeoJSON in v2 -->
+        <svg viewBox="0 0 300 520" width="100%" height="auto" aria-label="Map of pilot licensing authorities">
+          <path d="M118,28 L138,42 L132,64 Q150,70 148,88 L134,96 Q142,112 136,128 L118,134 Q130,148 124,164 L104,158 Q96,174 84,180 L66,172 Q56,186 62,198 L84,204 Q76,220 88,228 L110,222 Q124,232 120,248 L104,258 Q118,268 130,264 L148,254 Q162,262 158,278 L146,290 Q160,298 172,294 L178,310 Q170,326 178,340 L196,336 Q210,346 206,362 L192,372 Q204,382 218,378 L238,384 Q252,396 246,412 L258,428 Q266,444 254,456 L232,462 Q216,470 198,464 L176,470 Q158,476 142,468 L120,472 Q102,466 108,450 L96,438 Q82,442 72,432 L84,418 Q94,408 88,396 L72,402 Q58,394 64,380 L82,372 Q94,364 90,350 L100,336 Q92,322 100,310 L112,300 Q104,286 112,274 L106,260 Q94,252 98,238 L90,224 Q78,216 82,202 L74,190 Q66,178 74,166 L88,158 Q82,144 92,134 L104,128 Q98,114 106,104 L98,90 Q94,74 104,64 L98,48 Z"
+            fill="#1d1f26" stroke="#2a2c33" stroke-width="2"/>
+          <g id="gbDots"></g>
+          <!-- London inset -->
+          <rect x="14" y="34" width="120" height="150" rx="3" fill="#17181d" stroke="#2a2c33" stroke-width="1.5"/>
+          <text x="24" y="52" class="map-inset-label">LONDON</text>
+          <line x1="134" y1="120" x2="236" y2="418" stroke="#2a2c33" stroke-width="1" stroke-dasharray="3 3"/>
+          <g id="londonDots"></g>
+        </svg>
+      </div>
+      <div class="map-legend">
+        <div class="legend-row"><span class="legend-dot tightening"></span><span class="legend-text"><b>Tightening</b><span>New/expanded CIA, SCZ or restrictive consultation live</span></span></div>
+        <div class="legend-row"><span class="legend-dot stable"></span><span class="legend-text"><b>Stable</b><span>Policy in force, no active change</span></span></div>
+        <div class="legend-row"><span class="legend-dot loosening"></span><span class="legend-text"><b>Loosening</b><span>CIA or overprovision removed, presumption dropped</span></span></div>
+        <div class="legend-row"><span class="legend-dot mixed"></span><span class="legend-text"><b>Mixed</b><span>Tightening and loosening moves at once</span></span></div>
+        <p class="map-note">Pilot split: 4 tightening · 7 stable · 3 loosening · 2 mixed. Roughly as many authorities are opening up as closing in — the national picture is messier than the headlines.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="table-section" id="authorities">
+    <div class="section-label">The 16 — pilot authority status</div>
+    <div class="authority-grid" id="authorityGrid"></div>
+  </section>
+
+  <section class="feed-section">
+    <div class="section-label">Notice log</div>
+    <div class="clip-board" id="clipBoard"></div>
+  </section>
+
+  <section id="report" class="report-panel">
+    <div>
+      <h2>The Quarterly Report</h2>
+      <p>Authority-by-authority scoring, consultation outcomes, review patterns and where licence scarcity is rising — built for the people who need to know before it's public.</p>
+      <div class="buyer-tags">
+        <span class="buyer-tag">Licensing solicitors</span>
+        <span class="buyer-tag">Hospitality property investors</span>
+        <span class="buyer-tag">Industry &amp; brand partners</span>
+      </div>
+    </div>
+    <!-- TODO: point at Gumroad product URL -->
+    <a class="report-cta" href="#newsletter">Notify me at launch</a>
+  </section>
+
+  <section class="newsletter" id="newsletter">
+    <h2>Get the weekly notice</h2>
+    <p>Every consultation, review, and closure — free, every Monday. No spam, just the door notices you'd have missed.</p>
+    <!-- TODO: swap for Substack embed once publication is created -->
+    <div class="sub-form">
+      <input type="email" placeholder="you@email.com" aria-label="Email address">
+      <button>Subscribe</button>
+    </div>
+  </section>
+
+</div>
+
+<footer>
+  <div class="wrap">
+    <p>Sourced weekly from public licensing consultations, council committee agendas, court reporting and licensing trade press across England, Scotland and Wales. On The Door is an independent tracker, not affiliated with any licensing authority, trade body, or charity.</p>
+    <p class="mono" id="asOf"></p>
+  </div>
+</footer>
+
+<script>
+/* ══════════════════════════════════════════════════════════════
+   DATA — generated from data/councils.json + data/notices.json
+   Regenerate this block from those files on each weekly update.
+   Dataset date: 2026-07-06
+   ══════════════════════════════════════════════════════════════ */
+const DATA_DATE = "6 July 2026";
+
+const COUNTERS = [
+  {num:16, cls:"",      label:"Authorities tracked"},
+  {num:1,  cls:"stamp", label:"Open consultations"},
+  {num:2,  cls:"",      label:"Licence reviews this month"},
+  {num:1,  cls:"pulse", label:"Closures this quarter"}
+];
+
+const NOTICES = [
+  {act:"Licensing Act 2003", borough:"Westminster", stamp:["open","Consultation open"],
+   body:"SoLP 2026 consultation live: West End CIZ trimmed slightly, but ringed by large new Special Consideration Zones.",
+   date:"Closes 9 Aug 2026",
+   url:"https://www.westminster.gov.uk/licensing/licensing-policy-and-strategy"},
+  {act:"Licensing Act 2003", borough:"Westminster", stamp:["review","Disputed"],
+   body:"NTIA brands the CIA consultation potentially unlawful — claims the licensed trade wasn't properly told it was happening.",
+   date:"Reported Apr 2026",
+   url:"https://www.thespiritsbusiness.com/2026/04/westminster-licensing-consultation-branded-unlawful/"},
+  {act:"Licensing Act 2003", borough:"Bristol", stamp:["review","Under review"],
+   body:"Police request review of El Rincón's premises licence on North Street. Owner appeals to customers for support. Hearing TBC.",
+   date:"Filed Jul 2026",
+   url:"https://www.bristol247.com/food-and-drink/news-food-and-drink/bar-owner-asks-customers-support-police-request-licence-review/"},
+  {act:"High Court", borough:"Newham", stamp:["closed","Revocation upheld"],
+   body:"High Court rejects Pier One Club's appeal. Licence revoked over women's safety failures; any return needs a new operator.",
+   date:"Judgment 30 Jun 2026",
+   url:"https://www.localgovernmentlawyer.co.uk/licensing/399-licensing-news/59397-high-court-rejects-appeal-by-nightclub-operator-over-revocation-of-licence"},
+  {act:"Licensing Act 2003", borough:"Southwark", stamp:["closed","Closed till 2027"],
+   body:"Corsica Studios closes after 25 years. S106 deal funds soundproofing and refurb at the developer's cost — handback 2027.",
+   date:"Closed 29 Mar 2026",
+   url:"https://www.corsicastudios.com/words/nothing-lasts-forever"},
+  {act:"Licensing Act 2003", borough:"Brighton & Hove", stamp:["mixed","Zone reframed"],
+   body:"CIZ scrapped, replaced by a City Safety Area: same boundary, no blanket refusal, matrix scrutiny + 'good operator' policy.",
+   date:"In force 5 Jan 2026",
+   url:"https://www.brighton-hove.gov.uk/business-and-trade/licensing-and-gambling/statement-licensing-policy-2026"}
+];
+
+const AUTHORITIES = [
+  {name:"Westminster", dir:"tightening", detail:"SoLP 2026 consultation open — CIZ kept, new Special Consideration Zones proposed.", meta:"Consultation closes 9 Aug 2026", url:"https://www.westminster.gov.uk/licensing/licensing-policy-and-strategy"},
+  {name:"Hackney", dir:"tightening", detail:"CIA for Shoreditch & Dalston consulted; formal adoption still to be confirmed.", meta:"SoLP to Aug 2028", url:"https://www.hackney.gov.uk/business-and-licensing/licensing/licensing-policy-alcohol-entertainment-and-late-night-refreshment"},
+  {name:"Camden", dir:"loosening", detail:"Camden Town & Seven Dials CIAs removed — insufficient evidence, committee ruled.", meta:"SoLP 2025–2030", url:"https://www.camden.gov.uk/licensing-policy"},
+  {name:"Tower Hamlets", dir:"mixed", detail:"Brick Lane CIA retained & expanded SE; Bethnal Green CIA removed.", meta:"CIA to Nov 2027", url:"https://talk.towerhamlets.gov.uk/cumulative-impact-policy-review-2024"},
+  {name:"Islington", dir:"stable", detail:"Six CIAs in force incl. Archway. SoLP expires 2027 — renewal consultation likely late 2026.", meta:"SoLP 2023–2027 · WATCH", url:"https://www.islington.gov.uk/business/licences-permits-registration/alcohol-and-entertainment-licences/islington-licensing-policy"},
+  {name:"Southwark", dir:"tightening", detail:"SoLP 2026–31 adopted: Borough & Bankside + Camberwell CIAs kept; late-night levy extension proposed.", meta:"SoLP 2026–2031", url:"https://www.southwark.gov.uk/sites/default/files/2026-04/Licensing-Act-2003-statement-of-licensing-policy-2026-to-2031.pdf"},
+  {name:"Lambeth", dir:"stable", detail:"Clapham High Street CIP in force with rebuttable presumption of refusal.", meta:"SoLP 2024–2029", url:"https://www.lambeth.gov.uk/business-rates-services-licensing/licensing-permits/licensing-policy"},
+  {name:"Manchester", dir:"stable", detail:"No CIA — deliberately flexible, merits-based policy with defined late-night phase.", meta:"SoLP 2024–2029", url:"https://www.manchester.gov.uk/licences-and-permissions/statement-of-licensing-policy2"},
+  {name:"Bristol", dir:"stable", detail:"City-centre CIA in effect since Mar 2024; El Rincón review pending.", meta:"SoLP 2025–2030 · CIA renews 2027", url:"https://www.bristol.gov.uk/licences-permits/licensing-policy"},
+  {name:"Birmingham", dir:"stable", detail:"New policy from 1 May 2026; Broad Street & city-centre CIP carried forward.", meta:"Policy from May 2026", url:"https://www.birmingham.gov.uk/"},
+  {name:"Leeds", dir:"tightening", detail:"CIA 2026–28 approved after Beeston addition and Headingley Lane expansion.", meta:"CIA 2026–2028", url:"https://www.leeds.gov.uk/licensing/licensing-policies"},
+  {name:"Newcastle", dir:"stable", detail:"Five CIP areas (off-sales / late-night refreshment) in force since Nov 2023.", meta:"SoLP 2023–2028", url:"https://www.newcastle.gov.uk/services/licences-and-permits/licensing-act-2003-pages/licensing-act-2003-statement-licensing"},
+  {name:"Liverpool", dir:"loosening", detail:"All CIPs removed in 2021. SoLP renewal now due — consultation could land any week.", meta:"SoLP renewal due 2026 · WATCH", url:"https://liverpool.gov.uk/council/strategies-plans-and-policies/licensing/policy-enforcement-and-regulations/"},
+  {name:"Brighton & Hove", dir:"mixed", detail:"CIZ replaced by City Safety Area — same map, softer presumption, safety-first matrix.", meta:"SoLP from 5 Jan 2026", url:"https://www.brighton-hove.gov.uk/business-and-trade/licensing-and-gambling/statement-licensing-policy-2026"},
+  {name:"Glasgow", dir:"stable", detail:"Overprovision areas in force under Licensing (Scotland) Act 2005 policy statement.", meta:"Policy 2023–2028 · Scots regime", url:"https://www.glasgow.gov.uk/article/8074/Licensing-Policy-Statement"},
+  {name:"Edinburgh", dir:"loosening", detail:"Overprovision policy scrapped 5–3 (Jun 2025) — Old Town, Princes St, Tollcross, Leith St opened up.", meta:"Scots regime · contested vote", url:"https://www.edinburgh.gov.uk/licences-permits/edinburghs-licensing-board"}
+];
+
+const CLIPS = [
+  {tag:"Policy", date:"1 May 26", text:"Birmingham's new licensing policy takes effect — Broad Street CIP carried forward.", source:"B'ham CC"},
+  {tag:"Policy", date:"Apr 26", text:"Southwark publishes SoLP 2026–31: CIAs kept, wider late-night levy proposed.", source:"Southwark"},
+  {tag:"Closure", date:"29 Mar 26", text:"Corsica Studios closes for S106 refurb after 25 years at Elephant & Castle.", source:"Corsica"},
+  {tag:"Policy", date:"5 Jan 26", text:"Brighton's City Safety Area replaces the CIZ — presumption of refusal dropped.", source:"B&H CC"},
+  {tag:"Policy", date:"Jan 26", text:"Leeds approves CIA 2026–28 after Beeston and Headingley expansions.", source:"Leeds CC"},
+  {tag:"Policy", date:"Jun 25", text:"Edinburgh scraps overprovision by split vote despite police & NHS evidence.", source:"IoL"},
+  {tag:"Policy", date:"2025", text:"Camden removes Camden Town & Seven Dials cumulative impact areas.", source:"Camden"}
+];
+
+const DIR_COLOR = {tightening:"#c1493f", stable:"#8ea3ab", loosening:"#3d7a52", mixed:"#d6547e"};
+
+/* GB map dots (approx projected) */
+const GB_DOTS = [
+  {name:"Glasgow",    dir:"stable",    x:60,  y:170, lx:8,  ly:-8},
+  {name:"Edinburgh",  dir:"loosening", x:100, y:162, lx:9,  ly:3},
+  {name:"Newcastle",  dir:"stable",    x:168, y:220, lx:9,  ly:3},
+  {name:"Leeds",      dir:"tightening",x:170, y:286, lx:9,  ly:3},
+  {name:"Manchester", dir:"stable",    x:142, y:304, lx:-12,ly:14},
+  {name:"Liverpool",  dir:"loosening", x:110, y:308, lx:-14,ly:-8},
+  {name:"Birmingham", dir:"stable",    x:156, y:358, lx:9,  ly:3},
+  {name:"Bristol",    dir:"stable",    x:126, y:418, lx:-10, ly:14},
+  {name:"Brighton",   dir:"mixed",     x:222, y:456, lx:-8, ly:14},
+  {name:"London",     dir:"tightening",x:236, y:418, lx:9,  ly:3}
+];
+const LDN_DOTS = [
+  {name:"Camden",       dir:"loosening", x:52,  y:78},
+  {name:"Islington",    dir:"stable",    x:78,  y:72},
+  {name:"Hackney",      dir:"tightening",x:104, y:78},
+  {name:"Tower Hamlets",dir:"mixed",     x:106, y:106},
+  {name:"Westminster",  dir:"tightening",x:48,  y:110},
+  {name:"Lambeth",      dir:"stable",    x:62,  y:140},
+  {name:"Southwark",    dir:"tightening",x:88,  y:134}
+];
+
+/* ── render ── */
+document.getElementById('chalkboard').innerHTML =
+  COUNTERS.map(c=>`<div class="chalk-item"><div class="chalk-num ${c.cls}">${c.num}</div><div class="chalk-label">${c.label}</div></div>`).join('')
+  + `<div class="chalk-asof">chalked up ${DATA_DATE}</div>`;
+
+document.getElementById('noticeBoard').innerHTML = NOTICES.map(n=>`
+  <div class="notice-card">
+    <div class="notice-head"><span>${n.act}</span><span>PUBLIC NOTICE</span></div>
+    <div class="notice-borough">${n.borough}</div>
+    <div class="notice-body">${n.body} <a href="${n.url}" target="_blank" rel="noopener">source&nbsp;→</a></div>
+    <span class="notice-stamp ${n.stamp[0]}">${n.stamp[1]}</span>
+    <div class="notice-date">${n.date}</div>
+  </div>`).join('');
+
+document.getElementById('gbDots').innerHTML = GB_DOTS.map(d=>`
+  <g class="map-dot"><circle cx="${d.x}" cy="${d.y}" r="6" fill="${DIR_COLOR[d.dir]}"/>
+  <text x="${d.x+d.lx}" y="${d.y+d.ly}" class="map-label"${d.lx<0?' text-anchor="end"':''}>${d.name}</text></g>`).join('');
+
+document.getElementById('londonDots').innerHTML = LDN_DOTS.map(d=>`
+  <g class="map-dot"><circle cx="${d.x}" cy="${d.y}" r="5" fill="${DIR_COLOR[d.dir]}"/>
+  <text x="${d.x}" y="${d.y+14}" class="map-label" text-anchor="middle" font-size="7.5">${d.name}</text></g>`).join('');
+
+document.getElementById('authorityGrid').innerHTML = AUTHORITIES.map(a=>`
+  <div class="authority-row">
+    <div class="authority-top"><span class="authority-name">${a.name}</span><span class="dir-chip ${a.dir}">${a.dir}</span></div>
+    <div class="authority-detail">${a.detail}</div>
+    <div class="authority-meta">${a.meta} · <a href="${a.url}" target="_blank" rel="noopener">source →</a></div>
+  </div>`).join('');
+
+document.getElementById('clipBoard').innerHTML = CLIPS.map(c=>`
+  <div class="clipping">
+    <span class="clip-tag">${c.tag}</span>
+    <div class="clip-text">${c.text}</div>
+    <div class="clip-foot"><span>${c.date}</span><span>${c.source}</span></div>
+  </div>`).join('');
+
+document.getElementById('asOf').textContent = `Data as of ${DATA_DATE}. Pilot coverage: 16 authorities. Full source registry in the repo.`;
+</script>
+
+</body>
+</html>
