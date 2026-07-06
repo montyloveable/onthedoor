@@ -51,15 +51,18 @@
       #1c2320;
     border:10px solid #4a3524;border-radius:2px;
     box-shadow: inset 0 0 40px rgba(0,0,0,0.5), 0 12px 24px rgba(0,0,0,0.4);
-    padding:22px 26px;display:flex;gap:36px;flex-wrap:wrap;
+    padding:20px 26px 16px;display:flex;gap:44px;flex-wrap:wrap;align-items:flex-end;
   }
-  .chalk-item{text-align:left;}
+  .chalk-item{text-align:left;text-decoration:none;display:block;}
+  a.chalk-item:hover .chalk-num{text-shadow:0 0 14px currentColor;}
+  a.chalk-item:hover .chalk-label{color:#d9e2db;text-decoration:underline;text-underline-offset:3px;}
   .chalk-num{font-family:'Caveat',cursive;font-weight:700;font-size:52px;line-height:1;color:#eef2ee;text-shadow:0 0 6px rgba(238,242,238,0.25);}
   .chalk-num.stamp{color:#e8a09a;text-shadow:0 0 6px rgba(232,160,154,0.3);}
   .chalk-num.pulse{color:#e9a7bf;text-shadow:0 0 6px rgba(233,167,191,0.3);}
   .chalk-num.loose{color:#a8d4b6;text-shadow:0 0 6px rgba(168,212,182,0.3);}
   .chalk-label{font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:0.08em;text-transform:uppercase;color:#9aa39c;margin-top:2px;}
-  .chalk-asof{width:100%;font-family:'Caveat',cursive;font-size:17px;color:#8f9c93;margin-top:-4px;}
+  .chalk-asof{margin-left:auto;align-self:flex-end;font-family:'Caveat',cursive;font-size:17px;color:#8f9c93;white-space:nowrap;padding-bottom:2px;}
+  @media (max-width:720px){.chalk-asof{width:100%;margin-left:0;}}
 
   /* ── NOTICE BOARD ── */
   .board-section{padding:44px 0 60px;position:relative;}
@@ -220,10 +223,10 @@
           <path d="M118,28 L138,42 L132,64 Q150,70 148,88 L134,96 Q142,112 136,128 L118,134 Q130,148 124,164 L104,158 Q96,174 84,180 L66,172 Q56,186 62,198 L84,204 Q76,220 88,228 L110,222 Q124,232 120,248 L104,258 Q118,268 130,264 L148,254 Q162,262 158,278 L146,290 Q160,298 172,294 L178,310 Q170,326 178,340 L196,336 Q210,346 206,362 L192,372 Q204,382 218,378 L238,384 Q252,396 246,412 L258,428 Q266,444 254,456 L232,462 Q216,470 198,464 L176,470 Q158,476 142,468 L120,472 Q102,466 108,450 L96,438 Q82,442 72,432 L84,418 Q94,408 88,396 L72,402 Q58,394 64,380 L82,372 Q94,364 90,350 L100,336 Q92,322 100,310 L112,300 Q104,286 112,274 L106,260 Q94,252 98,238 L90,224 Q78,216 82,202 L74,190 Q66,178 74,166 L88,158 Q82,144 92,134 L104,128 Q98,114 106,104 L98,90 Q94,74 104,64 L98,48 Z"
             fill="#1d1f26" stroke="#2a2c33" stroke-width="2"/>
           <g id="gbDots"></g>
-          <!-- London inset -->
-          <rect x="14" y="34" width="120" height="150" rx="3" fill="#17181d" stroke="#2a2c33" stroke-width="1.5"/>
-          <text x="24" y="52" class="map-inset-label">LONDON</text>
-          <line x1="134" y1="120" x2="236" y2="418" stroke="#2a2c33" stroke-width="1" stroke-dasharray="3 3"/>
+          <!-- London inset (top-right, clear of Scotland) -->
+          <rect x="168" y="30" width="124" height="168" rx="3" fill="#17181d" stroke="#2a2c33" stroke-width="1.5"/>
+          <text x="178" y="48" class="map-inset-label">LONDON</text>
+          <line x1="232" y1="198" x2="236" y2="412" stroke="#2a2c33" stroke-width="1" stroke-dasharray="3 3"/>
           <g id="londonDots"></g>
         </svg>
       </div>
@@ -289,10 +292,10 @@
 const DATA_DATE = "6 July 2026";
 
 const COUNTERS = [
-  {num:16, cls:"",      label:"Authorities tracked"},
-  {num:1,  cls:"stamp", label:"Open consultations"},
-  {num:2,  cls:"",      label:"Licence reviews this month"},
-  {num:1,  cls:"pulse", label:"Closures this quarter"}
+  {num:16, cls:"",      label:"Authorities tracked",         href:"#authorities"},
+  {num:1,  cls:"stamp", label:"Open consultations",          href:"https://www.westminster.gov.uk/licensing/licensing-policy-and-strategy", ext:true, title:"Westminster SoLP 2026 — closes 9 Aug 2026"},
+  {num:2,  cls:"",      label:"Licence reviews this month",  href:"#board"},
+  {num:1,  cls:"pulse", label:"Closures this quarter",       href:"#board"}
 ];
 
 const NOTICES = [
@@ -367,18 +370,18 @@ const GB_DOTS = [
   {name:"London",     dir:"tightening",x:236, y:418, lx:9,  ly:3}
 ];
 const LDN_DOTS = [
-  {name:"Camden",       dir:"loosening", x:52,  y:78},
-  {name:"Islington",    dir:"stable",    x:78,  y:72},
-  {name:"Hackney",      dir:"tightening",x:104, y:78},
-  {name:"Tower Hamlets",dir:"mixed",     x:106, y:106},
-  {name:"Westminster",  dir:"tightening",x:48,  y:110},
-  {name:"Lambeth",      dir:"stable",    x:62,  y:140},
-  {name:"Southwark",    dir:"tightening",x:88,  y:134}
+  {name:"Camden",       dir:"loosening", x:200, y:80},
+  {name:"Islington",    dir:"stable",    x:232, y:64},
+  {name:"Hackney",      dir:"tightening",x:262, y:84},
+  {name:"Tower Hamlets",dir:"mixed",     x:262, y:120},
+  {name:"Westminster",  dir:"tightening",x:196, y:118},
+  {name:"Lambeth",      dir:"stable",    x:204, y:162},
+  {name:"Southwark",    dir:"tightening",x:238, y:148}
 ];
 
 /* ── render ── */
 document.getElementById('chalkboard').innerHTML =
-  COUNTERS.map(c=>`<div class="chalk-item"><div class="chalk-num ${c.cls}">${c.num}</div><div class="chalk-label">${c.label}</div></div>`).join('')
+  COUNTERS.map(c=>`<a class="chalk-item" href="${c.href}"${c.ext?' target="_blank" rel="noopener"':''}${c.title?` title="${c.title}"`:''}><div class="chalk-num ${c.cls}">${c.num}</div><div class="chalk-label">${c.label}${c.ext?' ↗':''}</div></a>`).join('')
   + `<div class="chalk-asof">chalked up ${DATA_DATE}</div>`;
 
 document.getElementById('noticeBoard').innerHTML = NOTICES.map(n=>`
