@@ -1,0 +1,178 @@
+{
+  "meta": {
+    "dataset": "On The Door — live notice board",
+    "generated": "2026-07-06",
+    "types": ["consultation", "licence_review", "closure", "policy_change", "court"],
+    "counters": {
+      "open_consultations": 1,
+      "reviews_this_month": 2,
+      "closures_this_quarter": 1
+    }
+  },
+  "notices": [
+    {
+      "id": "wcc-solp-2026",
+      "type": "consultation",
+      "status": "OPEN",
+      "direction": "tightening",
+      "authority": "Westminster",
+      "headline": "Westminster consults on 2026 licensing policy — new Special Consideration Zones around the West End",
+      "detail": "Draft SoLP keeps the West End CIZ (trimmed slightly NE of Covent Garden) but rings it with large new Special Consideration Zones. Consultation closes 5pm, 9 August 2026.",
+      "date": "2026-07-03",
+      "deadline": "2026-08-09",
+      "sources": [
+        "https://fitzrovianews.com/2026/07/03/westminster-council-seeks-views-on-the-2026-revision-of-its-licensing-policy/",
+        "https://www.westminster.gov.uk/licensing/licensing-policy-and-strategy/cumulative-impact-assessment"
+      ]
+    },
+    {
+      "id": "ntia-wcc-unlawful",
+      "type": "policy_change",
+      "status": "DISPUTE",
+      "direction": "tightening",
+      "authority": "Westminster",
+      "headline": "NTIA brands Westminster's CIA consultation potentially unlawful",
+      "detail": "NTIA alleges the consultation (part of the After Dark strategy) was not fair, transparent or accessible, and that much of the licensed trade didn't know it was happening.",
+      "date": "2026-04",
+      "sources": [
+        "https://www.thespiritsbusiness.com/2026/04/westminster-licensing-consultation-branded-unlawful/"
+      ]
+    },
+    {
+      "id": "el-rincon-review",
+      "type": "licence_review",
+      "status": "PENDING",
+      "direction": "tightening",
+      "authority": "Bristol",
+      "venue": "El Rincón, North Street",
+      "headline": "Police call review of El Rincón's licence; owner appeals to customers for support",
+      "detail": "Avon & Somerset Police requested Bristol City Council review the North Street bar's premises licence (July 2026). Hearing date TBC.",
+      "date": "2026-07",
+      "sources": [
+        "https://www.bristol247.com/food-and-drink/news-food-and-drink/bar-owner-asks-customers-support-police-request-licence-review/"
+      ]
+    },
+    {
+      "id": "pier-one-high-court",
+      "type": "court",
+      "status": "DECIDED",
+      "direction": "tightening",
+      "authority": "Newham (High Court)",
+      "venue": "Pier One Club, Canning Town",
+      "headline": "High Court rejects appeal over Pier One Club revocation",
+      "detail": "Judgment 30 June 2026. Licence revoked Nov 2023 after Newham Council and Met Police raised women's safety concerns incl. two alleged rapes. Landlord's route back requires variation + new operator under stringent conditions.",
+      "date": "2026-06-30",
+      "sources": [
+        "https://www.localgovernmentlawyer.co.uk/licensing/399-licensing-news/59397-high-court-rejects-appeal-by-nightclub-operator-over-revocation-of-licence"
+      ]
+    },
+    {
+      "id": "corsica-closure",
+      "type": "closure",
+      "status": "CLOSED (REOPENING 2027)",
+      "direction": "stable",
+      "authority": "Southwark",
+      "venue": "Corsica Studios, Elephant & Castle",
+      "headline": "Corsica Studios closes after 25 years — S106 refurb, handback in 2027",
+      "detail": "Closed 29 March 2026 amid the Elephant & Castle development. Venue to be soundproofed and refurbished at developer Delancey's cost under a Section 106 agreement, with long-term lease and noise protections, returning 2027.",
+      "date": "2026-03-29",
+      "sources": [
+        "https://www.corsicastudios.com/words/nothing-lasts-forever",
+        "https://ra.co/news/83682",
+        "https://mixmag.net/read/corsica-studios-will-close-in-current-form-in-march-2026-news"
+      ]
+    },
+    {
+      "id": "brighton-csa",
+      "type": "policy_change",
+      "status": "IN FORCE",
+      "direction": "mixed",
+      "authority": "Brighton & Hove",
+      "headline": "Brighton scraps its CIZ — 'City Safety Area' takes over, presumption of refusal dropped",
+      "detail": "New SoLP adopted 18 Dec 2025, effective 5 Jan 2026. Same boundary as the old CIZ but no blanket refusal presumption; matrix-based scrutiny plus a new 'good operator' policy. Special Stress Area retained.",
+      "date": "2026-01-05",
+      "sources": [
+        "https://www.brighton-hove.gov.uk/business-and-trade/licensing-and-gambling/statement-licensing-policy-2026",
+        "https://www.localgovernmentlawyer.co.uk/licensing/399-licensing-news/99461-city-council-ditches-cumulative-impact-zone-for-city-safe-area-in-new-licensing-approach-introduces-good-operator-policy"
+      ]
+    },
+    {
+      "id": "leeds-cia-2026",
+      "type": "policy_change",
+      "status": "IN FORCE",
+      "direction": "tightening",
+      "authority": "Leeds",
+      "headline": "Leeds approves CIA 2026–28 after back-to-back expansions",
+      "detail": "Approved by Licensing Committee Jan 2026, following the Beeston CIA addition (Jan 2025) and the Headingley Lane/Hyde Park expansion (2025). Full 232-page assessment only available by email request.",
+      "date": "2026-01",
+      "sources": [
+        "https://www.leeds.gov.uk/licensing/licensing-policies/statement-of-licensing-policy"
+      ]
+    },
+    {
+      "id": "southwark-solp-2026",
+      "type": "policy_change",
+      "status": "IN FORCE",
+      "direction": "tightening",
+      "authority": "Southwark",
+      "headline": "Southwark's 2026–31 policy lands with CIAs intact and a wider late-night levy on the table",
+      "detail": "Borough & Bankside and Camberwell CIAs retained; proposal to extend the Late Night Levy to late-night refreshment premises trading midnight–6am (114 premises, ~£127k revenue).",
+      "date": "2026-02",
+      "sources": [
+        "https://www.southwark.gov.uk/sites/default/files/2026-04/Licensing-Act-2003-statement-of-licensing-policy-2026-to-2031.pdf"
+      ]
+    },
+    {
+      "id": "birmingham-policy-2026",
+      "type": "policy_change",
+      "status": "IN FORCE",
+      "direction": "stable",
+      "authority": "Birmingham",
+      "headline": "Birmingham's new licensing policy takes effect 1 May 2026 — Broad Street CIP carried forward",
+      "detail": "Broad Street and parts of the city centre remain cumulative impact areas with stricter scrutiny. Boundary detail needs pulling from the policy PDF.",
+      "date": "2026-05-01",
+      "verify": true,
+      "sources": ["https://www.birmingham.gov.uk/"]
+    },
+    {
+      "id": "edinburgh-op-scrapped",
+      "type": "policy_change",
+      "status": "IN FORCE",
+      "direction": "loosening",
+      "authority": "Edinburgh",
+      "headline": "Edinburgh ends overprovision — Old Town, Princes Street, Tollcross, Leith Street opened up",
+      "detail": "Board voted 5–3 on 23 June 2025 to scrap the overprovision policy despite evidence from Police Scotland, NHS Lothian and Alcohol Focus Scotland.",
+      "date": "2025-06-23",
+      "sources": [
+        "https://instituteoflicensing.org/network-news/edinburgh-licensing-board-scraps-overprovision-policy-in-split-vote/",
+        "https://dramscotland.co.uk/2025/08/12/edinburgh-licensing-board-ends-over-provision-policy/"
+      ]
+    },
+    {
+      "id": "camden-cip-removed",
+      "type": "policy_change",
+      "status": "IN FORCE",
+      "direction": "loosening",
+      "authority": "Camden",
+      "headline": "Camden drops Camden Town and Seven Dials cumulative impact areas",
+      "detail": "SoLP 2025–2030: committee found insufficient evidence to sustain a CIA. Resident associations objected to the removal.",
+      "date": "2025",
+      "sources": [
+        "https://www.camden.gov.uk/documents/d/guest/camden-statement-of-licensing-policy-2025-to-2030"
+      ]
+    }
+  ],
+  "context_stats": {
+    "source": "NTIA, 2026",
+    "items": [
+      "One UK nightclub closes roughly every two days",
+      "26% of UK towns/cities that had a nightclub in 2020 now have none",
+      "16% of towns have lost all late-night venues entirely",
+      "~400 club closures since 2020 (over a third of the 2020 stock)"
+    ],
+    "sources": [
+      "https://www.recordoftheday.com/on-the-move/news-press/26-of-uk-towns-have-lost-all-nightclubs-with-1-in-6-have-no-late-night-venues-left-ntia-warns-of-growing-nightlife-crisis",
+      "https://www.newstatesman.com/spotlight/2026/03/the-policies-killing-britains-nightlife"
+    ]
+  }
+}
