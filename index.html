@@ -293,6 +293,7 @@
   <div class="wrap">
     <p>Sourced weekly from public licensing consultations, council committee agendas, court reporting and licensing trade press across England, Scotland and Wales. On The Door is an independent tracker, not affiliated with any licensing authority, trade body, or charity.</p>
     <p class="mono" id="asOf"></p>
+    <p class="mono">Contact: <a href="mailto:onthedoor@on-the-door.com" style="color:var(--notice-dim)">onthedoor@on-the-door.com</a></p>
   </div>
 </footer>
 
@@ -300,38 +301,38 @@
 /* ══════════════════════════════════════════════════════════════
    DATA — generated from data/councils.json + data/notices.json
    Regenerate this block from those files on each weekly update.
-   Dataset date: 2026-07-06
+   Dataset date: 2026-07-13
    ══════════════════════════════════════════════════════════════ */
-const DATA_DATE = "6 July 2026";
+const DATA_DATE = "13 July 2026";
 
 const COUNTERS = [
   {num:16, cls:"",      label:"Authorities tracked",         href:"#authorities"},
   {num:1,  cls:"stamp", label:"Open consultations",          href:"https://www.westminster.gov.uk/licensing/licensing-policy-and-strategy", ext:true, title:"Westminster SoLP 2026 — closes 9 Aug 2026"},
-  {num:2,  cls:"",      label:"Licence reviews this month",  href:"#board"},
-  {num:1,  cls:"pulse", label:"Closures this quarter",       href:"#board"}
+  {num:1,  cls:"",      label:"Licence reviews this month",  href:"#board"},
+  {num:0,  cls:"pulse", label:"Closures this quarter",       href:"#board"}
 ];
 
 const NOTICES = [
+  {act:"Licensing Act 2003", borough:"Bristol", stamp:["review","Reps close 16 Jul"],
+   body:"El Rincón review (police-requested): public representations close 16 July; hearing must then be listed within 20 working days.",
+   date:"Deadline 16 Jul 2026",
+   url:"https://www.bristol247.com/food-and-drink/news-food-and-drink/bar-owner-asks-customers-support-police-request-licence-review/"},
   {act:"Licensing Act 2003", borough:"Westminster", stamp:["open","Consultation open"],
-   body:"SoLP 2026 consultation live: West End CIZ trimmed slightly, but ringed by large new Special Consideration Zones.",
+   body:"SoLP 2026 consultation live: West End CIZ trimmed, Edgware Rd & Queensway CIZs dropped, new Special Consideration Zones ring the core.",
    date:"Closes 9 Aug 2026",
    url:"https://www.westminster.gov.uk/licensing/licensing-policy-and-strategy"},
+  {act:"Licensing Act 2003", borough:"Hackney", stamp:["review","Now confirmed"],
+   body:"Shoreditch CIA confirmed in force since 1 Apr 2025; Dalston made a Special Consideration Area. The council's policy page still doesn't mention either.",
+   date:"Verified 13 Jul 2026",
+   url:"https://hackney.moderngov.co.uk/ieDecisionDetails.aspx?ID=8179"},
   {act:"Licensing Act 2003", borough:"Westminster", stamp:["review","Disputed"],
    body:"NTIA brands the CIA consultation potentially unlawful — claims the licensed trade wasn't properly told it was happening.",
    date:"Reported Apr 2026",
    url:"https://www.thespiritsbusiness.com/2026/04/westminster-licensing-consultation-branded-unlawful/"},
-  {act:"Licensing Act 2003", borough:"Bristol", stamp:["review","Under review"],
-   body:"Police request review of El Rincón's premises licence on North Street. Owner appeals to customers for support. Hearing TBC.",
-   date:"Filed Jul 2026",
-   url:"https://www.bristol247.com/food-and-drink/news-food-and-drink/bar-owner-asks-customers-support-police-request-licence-review/"},
   {act:"High Court", borough:"Newham", stamp:["closed","Revocation upheld"],
    body:"High Court rejects Pier One Club's appeal. Licence revoked over women's safety failures; any return needs a new operator.",
    date:"Judgment 30 Jun 2026",
    url:"https://www.localgovernmentlawyer.co.uk/licensing/399-licensing-news/59397-high-court-rejects-appeal-by-nightclub-operator-over-revocation-of-licence"},
-  {act:"Licensing Act 2003", borough:"Southwark", stamp:["closed","Closed till 2027"],
-   body:"Corsica Studios closes after 25 years. S106 deal funds soundproofing and refurb at the developer's cost — handback 2027.",
-   date:"Closed 29 Mar 2026",
-   url:"https://www.corsicastudios.com/words/nothing-lasts-forever"},
   {act:"Licensing Act 2003", borough:"Brighton & Hove", stamp:["mixed","Zone reframed"],
    body:"CIZ scrapped, replaced by a City Safety Area: same boundary, no blanket refusal, matrix scrutiny + 'good operator' policy.",
    date:"In force 5 Jan 2026",
@@ -339,30 +340,31 @@ const NOTICES = [
 ];
 
 const AUTHORITIES = [
-  {name:"Westminster", dir:"tightening", detail:"SoLP 2026 consultation open — CIZ kept, new Special Consideration Zones proposed.", meta:"Consultation closes 9 Aug 2026", url:"https://www.westminster.gov.uk/licensing/licensing-policy-and-strategy"},
-  {name:"Hackney", dir:"tightening", detail:"CIA for Shoreditch & Dalston consulted; formal adoption still to be confirmed.", meta:"SoLP to Aug 2028", url:"https://www.hackney.gov.uk/business-and-licensing/licensing/licensing-policy-alcohol-entertainment-and-late-night-refreshment"},
+  {name:"Westminster", dir:"tightening", detail:"SoLP 2026 consultation open — West End CIZ kept (trimmed), Edgware Rd & Queensway CIZs dropped, new Special Consideration Zones.", meta:"Consultation closes 9 Aug 2026", url:"https://www.westminster.gov.uk/licensing/licensing-policy-and-strategy"},
+  {name:"Hackney", dir:"tightening", detail:"Shoreditch CIA in force since 1 Apr 2025; Dalston is a Special Consideration Area. Not yet shown on the council's policy page.", meta:"SoLP to Aug 2028", url:"https://www.hackney.gov.uk/business-and-licensing/licensing/licensing-policy-alcohol-entertainment-and-late-night-refreshment"},
   {name:"Camden", dir:"loosening", detail:"Camden Town & Seven Dials CIAs removed — insufficient evidence, committee ruled.", meta:"SoLP 2025–2030", url:"https://www.camden.gov.uk/licensing-policy"},
   {name:"Tower Hamlets", dir:"mixed", detail:"Brick Lane CIA retained & expanded SE; Bethnal Green CIA removed.", meta:"CIA to Nov 2027", url:"https://talk.towerhamlets.gov.uk/cumulative-impact-policy-review-2024"},
   {name:"Islington", dir:"stable", detail:"Six CIAs in force incl. Archway. SoLP expires 2027 — renewal consultation likely late 2026.", meta:"SoLP 2023–2027 · WATCH", url:"https://www.islington.gov.uk/business/licences-permits-registration/alcohol-and-entertainment-licences/islington-licensing-policy"},
   {name:"Southwark", dir:"tightening", detail:"SoLP 2026–31 adopted: Borough & Bankside + Camberwell CIAs kept; late-night levy extension proposed.", meta:"SoLP 2026–2031", url:"https://www.southwark.gov.uk/sites/default/files/2026-04/Licensing-Act-2003-statement-of-licensing-policy-2026-to-2031.pdf"},
   {name:"Lambeth", dir:"stable", detail:"Clapham High Street CIP in force with rebuttable presumption of refusal.", meta:"SoLP 2024–2029", url:"https://www.lambeth.gov.uk/business-rates-services-licensing/licensing-permits/licensing-policy"},
   {name:"Manchester", dir:"stable", detail:"No CIA — deliberately flexible, merits-based policy with defined late-night phase.", meta:"SoLP 2024–2029", url:"https://www.manchester.gov.uk/licences-and-permissions/statement-of-licensing-policy2"},
-  {name:"Bristol", dir:"stable", detail:"City-centre CIA in effect since Mar 2024; El Rincón review pending.", meta:"SoLP 2025–2030 · CIA renews 2027", url:"https://www.bristol.gov.uk/licences-permits/licensing-policy"},
-  {name:"Birmingham", dir:"stable", detail:"New policy from 1 May 2026; Broad Street & city-centre CIP carried forward.", meta:"Policy from May 2026", url:"https://www.birmingham.gov.uk/"},
+  {name:"Bristol", dir:"stable", detail:"City-centre CIA in effect since Mar 2024; El Rincón review — representations close 16 Jul.", meta:"SoLP 2025–2030 · CIA renews 2027", url:"https://www.bristol.gov.uk/licences-permits/licensing-policy"},
+  {name:"Birmingham", dir:"stable", detail:"Policy status unverified — council page still lists the 2015 SoLP; CIPs removed under the 2020 interim policy.", meta:"NEEDS VERIFICATION", url:"https://www.birmingham.gov.uk/info/20081/licensing/296/statement_of_licensing_policy"},
   {name:"Leeds", dir:"tightening", detail:"CIA 2026–28 approved after Beeston addition and Headingley Lane expansion.", meta:"CIA 2026–2028", url:"https://www.leeds.gov.uk/licensing/licensing-policies"},
   {name:"Newcastle", dir:"stable", detail:"Five CIP areas (off-sales / late-night refreshment) in force since Nov 2023.", meta:"SoLP 2023–2028", url:"https://www.newcastle.gov.uk/services/licences-and-permits/licensing-act-2003-pages/licensing-act-2003-statement-licensing"},
-  {name:"Liverpool", dir:"loosening", detail:"All CIPs removed in 2021. SoLP renewal now due — consultation could land any week.", meta:"SoLP renewal due 2026 · WATCH", url:"https://liverpool.gov.uk/council/strategies-plans-and-policies/licensing/policy-enforcement-and-regulations/"},
+  {name:"Liverpool", dir:"loosening", detail:"All CIPs removed in 2021. SoLP renewal now due — no consultation live as of 13 Jul.", meta:"SoLP renewal due 2026 · WATCH", url:"https://liverpool.gov.uk/council/strategies-plans-and-policies/licensing/licensing-policy-statement"},
   {name:"Brighton & Hove", dir:"mixed", detail:"CIZ replaced by City Safety Area — same map, softer presumption, safety-first matrix.", meta:"SoLP from 5 Jan 2026", url:"https://www.brighton-hove.gov.uk/business-and-trade/licensing-and-gambling/statement-licensing-policy-2026"},
   {name:"Glasgow", dir:"stable", detail:"Overprovision areas in force under Licensing (Scotland) Act 2005 policy statement.", meta:"Policy 2023–2028 · Scots regime", url:"https://www.glasgow.gov.uk/article/8074/Licensing-Policy-Statement"},
   {name:"Edinburgh", dir:"loosening", detail:"Overprovision policy scrapped 5–3 (Jun 2025) — Old Town, Princes St, Tollcross, Leith St opened up.", meta:"Scots regime · contested vote", url:"https://www.edinburgh.gov.uk/licences-permits/edinburghs-licensing-board"}
 ];
 
 const CLIPS = [
-  {tag:"Policy", date:"1 May 26", text:"Birmingham's new licensing policy takes effect — Broad Street CIP carried forward.", source:"B'ham CC"},
+  {tag:"Court", date:"16 Apr 26", text:"First-ever conviction for false statements under the Licensing Act 2003 — AI-written objections to Heaven's licence.", source:"11KBW"},
   {tag:"Policy", date:"Apr 26", text:"Southwark publishes SoLP 2026–31: CIAs kept, wider late-night levy proposed.", source:"Southwark"},
   {tag:"Closure", date:"29 Mar 26", text:"Corsica Studios closes for S106 refurb after 25 years at Elephant & Castle.", source:"Corsica"},
   {tag:"Policy", date:"5 Jan 26", text:"Brighton's City Safety Area replaces the CIZ — presumption of refusal dropped.", source:"B&H CC"},
   {tag:"Policy", date:"Jan 26", text:"Leeds approves CIA 2026–28 after Beeston and Headingley expansions.", source:"Leeds CC"},
+  {tag:"Policy", date:"Nov 25", text:"Home Office & DBT publish the National Licensing Policy Framework — CIAs should be evidence-based, not blanket bans.", source:"LGL"},
   {tag:"Policy", date:"Jun 25", text:"Edinburgh scraps overprovision by split vote despite police & NHS evidence.", source:"IoL"},
   {tag:"Policy", date:"2025", text:"Camden removes Camden Town & Seven Dials cumulative impact areas.", source:"Camden"}
 ];
