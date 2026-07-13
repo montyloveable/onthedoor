@@ -1,7 +1,7 @@
 {
   "meta": {
     "dataset": "On The Door — pilot council sources registry",
-    "generated": "2026-07-06",
+    "generated": "2026-07-13",
     "regime_note": "England & Wales: Cumulative Impact Policies/Assessments under Licensing Act 2003 (CIAs renew every 3 years, SoLPs every 5). Scotland: overprovision assessments under Licensing (Scotland) Act 2005.",
     "status_key": {
       "tightening": "New/expanded CIA, SCZ, or live consultation likely to restrict",
@@ -16,8 +16,8 @@
       "name": "Westminster City Council",
       "region": "London",
       "direction": "tightening",
-      "policy": "SoLP consultation open for 2026 revision; draft keeps West End CIZ (slightly reduced NE of Covent Garden) and adds large new Special Consideration Zones",
-      "cia_zones": ["West End Stress Area / CIZ", "proposed Special Consideration Zones (draft)"],
+      "policy": "SoLP consultation open for 2026 revision; draft keeps West End CIZ (slightly reduced NE of Covent Garden), REMOVES the Edgware Road and Queensway/Bayswater CIZs, adds large new Special Consideration Zones, and reworks Core Hours by premises type",
+      "cia_zones": ["West End Stress Area / CIZ", "proposed Special Consideration Zones (draft)", "Edgware Road CIZ (proposed removal)", "Queensway/Bayswater CIZ (proposed removal)"],
       "live_consultation": {
         "open": true,
         "closes": "2026-08-09",
@@ -36,14 +36,15 @@
       "name": "Hackney Council",
       "region": "London",
       "direction": "tightening",
-      "policy": "SoLP effective 1 Aug 2023 (max 5 yrs, review due by Aug 2028). CIA for Shoreditch & Dalston consulted; adoption not yet reflected on council policy page",
-      "cia_zones": ["Shoreditch (proposed CIA)", "Dalston (proposed CIA)"],
-      "live_consultation": { "open": false, "subject": "CIA consultation closed; VERIFY adoption status" },
+      "policy": "SoLP effective 1 Aug 2023 (max 5 yrs, review due by Aug 2028). CIA for Shoreditch PUBLISHED and Dalston designated a Special Consideration Area — decision 26 Feb 2025, effective 1 Apr 2025. Council's licensing policy page still does not reference either designation",
+      "cia_zones": ["Shoreditch (CIA in force since 1 Apr 2025)", "Dalston (Special Consideration Area, not a CIA)"],
+      "live_consultation": { "open": false },
       "sources": [
         "https://www.hackney.gov.uk/business-and-licensing/licensing/licensing-policy-alcohol-entertainment-and-late-night-refreshment",
-        "https://consultation.hackney.gov.uk/public-realm/cumulative-impact-assessment-consultation/"
+        "https://consultation.hackney.gov.uk/public-realm/cumulative-impact-assessment-consultation/",
+        "https://hackney.moderngov.co.uk/ieDecisionDetails.aspx?ID=8179"
       ],
-      "notes": "Consultation majority supported CIA but flagged economic/cultural concerns. NEEDS VERIFICATION: whether CIA formally published."
+      "notes": "VERIFIED 13 Jul 2026: Full Council decision 26 Feb 2025 — publish CIA for Shoreditch, designate Dalston a Special Consideration Area, SoLP revised to reference both, effective 1 Apr 2025. The council's own licensing policy page (checked 13 Jul 2026) still shows only the 2023 SoLP PDF with no CIA mention — evidence of the aggregation gap."
     },
     {
       "id": "camden",
@@ -144,20 +145,21 @@
         "https://www.bristol.gov.uk/licences-permits/licensing-policy",
         "https://bristol.citizenspace.com/licensing-regulatory-services/statement-of-licensing-policy/"
       ],
-      "notes": "Live licence review: El Rincón, North Street (police-requested, Jul 2026)."
+      "notes": "Live licence review: El Rincón, 298 North Street, Bedminster (police-requested; application valid 18 Jun 2026, ref 26/03363/PRREV). Public representations close 16 Jul 2026; hearing date still TBC as of 13 Jul 2026."
     },
     {
       "id": "birmingham",
       "name": "Birmingham City Council",
       "region": "West Midlands",
       "direction": "stable",
-      "policy": "New licensing policy implemented 1 May 2026; Broad Street and city centre remain cumulative impact areas with stricter scrutiny",
-      "cia_zones": ["Broad Street", "City centre (parts)"],
+      "policy": "Policy status UNVERIFIED: council's SoLP page (checked 13 Jul 2026) still lists the July 2015 policy as current; cumulative impact special policy areas (incl. Broad Street) were removed in the 2020 interim policy pending a full CIA. No evidence found for the previously reported 1 May 2026 policy",
+      "cia_zones": [],
       "live_consultation": { "open": false },
       "sources": [
-        "https://www.birmingham.gov.uk/"
+        "https://www.birmingham.gov.uk/info/20081/licensing/296/statement_of_licensing_policy",
+        "https://www.popall.co.uk/news-publications/news/midlands-council-removes-cumulative-impact-policies-under-new-interim-licensing-policy"
       ],
-      "notes": "NEEDS VERIFICATION: exact CIA boundaries in the 1 May 2026 policy — council CMIS links are unstable, pull the policy PDF directly."
+      "notes": "NEEDS VERIFICATION: prior claim of a new policy effective 1 May 2026 with Broad Street CIP carried forward could not be confirmed (13 Jul 2026) — council SoLP page still shows the July 2015 policy; Poppleston Allen reported CIPs (Broad Street, Hurst St/Arcadian, Central Moseley, Erdington, Digbeth) removed under the 2020 interim policy. Manual check of committee papers (CMIS) needed."
     },
     {
       "id": "leeds",
@@ -198,10 +200,10 @@
       "live_consultation": { "open": false },
       "next_review_due": "2026 (SoLP renewal due — WATCH)",
       "sources": [
-        "https://liverpool.gov.uk/council/strategies-plans-and-policies/licensing/policy-enforcement-and-regulations/",
+        "https://liverpool.gov.uk/council/strategies-plans-and-policies/licensing/licensing-policy-statement",
         "https://www.popall.co.uk/news-publications/news/liverpool-city-council-becomes-latest-authority-to-remove-their-cumulative-impact-policy-areas"
       ],
-      "notes": "SoLP renewal consultation should surface in 2026 — high-priority watch item for the weekly agent."
+      "notes": "SoLP renewal consultation should surface in 2026 — high-priority watch item for the weekly agent. Link fix 13 Jul 2026: previous source URL pointed at the council's enforcement-of-regulations policy page; replaced with the canonical Licensing Policy Statement page (still shows the 20 Jan 2021 policy — no renewal consultation live as of 13 Jul 2026)."
     },
     {
       "id": "brighton-hove",

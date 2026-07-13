@@ -1,5 +1,15 @@
 # On The Door — pilot dataset notes
-Generated 6 July 2026. Sources: council websites, ModernGov/CitizenSpace portals, licensing trade press (Poppleston Allen, Woods Whur, John Gaunt, Local Government Lawyer, Institute of Licensing), local press.
+Generated 6 July 2026; last weekly update 13 July 2026. Sources: council websites, ModernGov/CitizenSpace portals, licensing trade press (Poppleston Allen, Woods Whur, John Gaunt, Local Government Lawyer, Institute of Licensing), local press.
+
+## Weekly update log
+### 13 July 2026
+- Link check: all 16 authorities' primary sources checked. Two fixes: Birmingham (bare homepage → canonical SoLP page) and Liverpool (enforcement-policy page → canonical Licensing Policy Statement page). Camden's /licensing-policy page is JS-rendered (returns empty to plain fetch) but resolves and is correctly indexed — left in place.
+- HACKNEY VERIFIED: Full Council decision 26 Feb 2025 published the Shoreditch CIA and designated Dalston a Special Consideration Area (not a CIA), effective 1 Apr 2025 (hackney.moderngov.co.uk decision ID 8179). The council's licensing policy page still doesn't reference it. Watch-list item resolved.
+- BIRMINGHAM RETRACTED: no evidence found for the "new policy effective 1 May 2026 / Broad Street CIP carried forward" claim. Council SoLP page still lists the July 2015 policy; Poppleston Allen reported all CIPs removed under the 2020 interim policy. Notice retired; NEEDS VERIFICATION kept (check CMIS committee papers manually).
+- EL RINCÓN (Bristol): review ref 26/03363/PRREV, valid 18 Jun 2026; representations close 16 Jul 2026; hearing TBC.
+- Westminster: Woods Whur analysis adds detail — draft also removes Edgware Road and Queensway/Bayswater CIZs and reworks Core Hours by premises type. No NTIA escalation or legal challenge found this week.
+- Liverpool/Islington: no renewal consultations live yet.
+- Counters recomputed: 1 open consultation, 1 review this month (El Rincón), 0 closures this quarter (Q3).
 
 ## Files
 - `councils.json` — 16 pilot authorities: policy in force, CIA/overprovision zones, direction (tightening/stable/loosening/mixed), source URLs, next review dates.

@@ -1,13 +1,14 @@
 {
   "meta": {
     "dataset": "On The Door — live notice board",
-    "generated": "2026-07-06",
+    "generated": "2026-07-13",
     "types": ["consultation", "licence_review", "closure", "policy_change", "court"],
     "counters": {
       "open_consultations": 1,
-      "reviews_this_month": 2,
-      "closures_this_quarter": 1
-    }
+      "reviews_this_month": 1,
+      "closures_this_quarter": 0
+    },
+    "counter_notes": "Reviews this month (Jul 2026): El Rincón pending (Pier One was decided 30 Jun, i.e. last month). Closures this quarter (Q3 2026, from 1 Jul): none recorded — Corsica Studios closed 29 Mar 2026 (Q1)."
   },
   "notices": [
     {
@@ -17,12 +18,13 @@
       "direction": "tightening",
       "authority": "Westminster",
       "headline": "Westminster consults on 2026 licensing policy — new Special Consideration Zones around the West End",
-      "detail": "Draft SoLP keeps the West End CIZ (trimmed slightly NE of Covent Garden) but rings it with large new Special Consideration Zones. Consultation closes 5pm, 9 August 2026.",
+      "detail": "Draft SoLP keeps the West End CIZ (trimmed slightly NE of Covent Garden), removes the Edgware Road and Queensway/Bayswater CIZs, rings the West End with large new Special Consideration Zones, and reworks Core Hours by premises type. Consultation closes 5pm, 9 August 2026.",
       "date": "2026-07-03",
       "deadline": "2026-08-09",
       "sources": [
         "https://fitzrovianews.com/2026/07/03/westminster-council-seeks-views-on-the-2026-revision-of-its-licensing-policy/",
-        "https://www.westminster.gov.uk/licensing/licensing-policy-and-strategy/cumulative-impact-assessment"
+        "https://www.woodswhur.co.uk/westminster-city-councils-statement-of-licensing-policy-consultation-and-cumulative-impact-assessment-an-overview/",
+        "https://www.westminster.gov.uk/licensing/licensing-policy-and-strategy"
       ]
     },
     {
@@ -44,12 +46,14 @@
       "status": "PENDING",
       "direction": "tightening",
       "authority": "Bristol",
-      "venue": "El Rincón, North Street",
-      "headline": "Police call review of El Rincón's licence; owner appeals to customers for support",
-      "detail": "Avon & Somerset Police requested Bristol City Council review the North Street bar's premises licence (July 2026). Hearing date TBC.",
-      "date": "2026-07",
+      "venue": "El Rincón, 298 North Street, Bedminster",
+      "headline": "El Rincón review: public representations close 16 July — hearing date still to be listed",
+      "detail": "Avon & Somerset Police requested Bristol City Council review the North Street bar's premises licence, citing crime and disorder, public nuisance and public safety (application valid 18 Jun 2026, ref 26/03363/PRREV). Representations close 16 July 2026; the hearing must then be listed within 20 working days.",
+      "date": "2026-06-18",
+      "deadline": "2026-07-16",
       "sources": [
-        "https://www.bristol247.com/food-and-drink/news-food-and-drink/bar-owner-asks-customers-support-police-request-licence-review/"
+        "https://www.bristol247.com/food-and-drink/news-food-and-drink/bar-owner-asks-customers-support-police-request-licence-review/",
+        "https://www.bristol247.com/wp-content/uploads/2026/06/El-Rincon-license-review.pdf"
       ]
     },
     {
@@ -123,16 +127,18 @@
       ]
     },
     {
-      "id": "birmingham-policy-2026",
+      "id": "hackney-cia-adopted",
       "type": "policy_change",
       "status": "IN FORCE",
-      "direction": "stable",
-      "authority": "Birmingham",
-      "headline": "Birmingham's new licensing policy takes effect 1 May 2026 — Broad Street CIP carried forward",
-      "detail": "Broad Street and parts of the city centre remain cumulative impact areas with stricter scrutiny. Boundary detail needs pulling from the policy PDF.",
-      "date": "2026-05-01",
-      "verify": true,
-      "sources": ["https://www.birmingham.gov.uk/"]
+      "direction": "tightening",
+      "authority": "Hackney",
+      "headline": "Confirmed: Hackney's Shoreditch CIA has been in force since April 2025 — and the council's policy page still doesn't say so",
+      "detail": "Full Council decided 26 Feb 2025 to publish a Cumulative Impact Assessment for Shoreditch and designate Dalston a Special Consideration Area (not a CIA), effective 1 Apr 2025. As of 13 Jul 2026 the council's licensing policy page still shows only the 2023 SoLP with no mention of either designation.",
+      "date": "2025-04-01",
+      "sources": [
+        "https://hackney.moderngov.co.uk/ieDecisionDetails.aspx?ID=8179",
+        "https://consultation.hackney.gov.uk/public-realm/cumulative-impact-assessment-consultation/"
+      ]
     },
     {
       "id": "edinburgh-op-scrapped",
