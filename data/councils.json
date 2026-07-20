@@ -1,7 +1,7 @@
 {
   "meta": {
     "dataset": "On The Door — pilot council sources registry",
-    "generated": "2026-07-13",
+    "generated": "2026-07-20",
     "regime_note": "England & Wales: Cumulative Impact Policies/Assessments under Licensing Act 2003 (CIAs renew every 3 years, SoLPs every 5). Scotland: overprovision assessments under Licensing (Scotland) Act 2005.",
     "status_key": {
       "tightening": "New/expanded CIA, SCZ, or live consultation likely to restrict",
@@ -24,12 +24,13 @@
         "subject": "Statement of Licensing Policy 2026 + Cumulative Impact Assessment"
       },
       "sources": [
-        "https://www.westminster.gov.uk/licensing/licensing-policy-and-strategy/cumulative-impact-assessment",
+        "https://www.westminster.gov.uk/licensing/licensing-policy-and-strategy/statement-licensing-policy",
         "https://www.westminster.gov.uk/licensing/licensing-policy-and-strategy",
+        "https://www.westminster.gov.uk/licensing/licensing-policy-and-strategy/cumulative-impact-assessment",
         "https://fitzrovianews.com/2026/07/03/westminster-council-seeks-views-on-the-2026-revision-of-its-licensing-policy/",
         "https://www.woodswhur.co.uk/westminster-city-councils-statement-of-licensing-policy-consultation-and-cumulative-impact-assessment-an-overview/"
       ],
-      "notes": "NTIA has publicly branded the consultation potentially unlawful (April 2026) — live dispute, strong story for launch issue."
+      "notes": "NTIA has publicly branded the consultation potentially unlawful (April 2026) — live dispute; no escalation or legal challenge found as of 20 Jul 2026. LINK NOTE 20 Jul 2026: the consultation itself lives on the Statement of Licensing Policy subpage (updated 29 Jun 2026, links to Commonplace documents + survey, closes 5pm 9 Aug); the council's Cumulative Impact Assessment subpage still shows only the 2023 CIA (last updated Aug 2024) — the 2026 CIA was published as an ArcGIS storymap instead. Another aggregation-gap exhibit."
     },
     {
       "id": "hackney",
@@ -44,7 +45,7 @@
         "https://consultation.hackney.gov.uk/public-realm/cumulative-impact-assessment-consultation/",
         "https://hackney.moderngov.co.uk/ieDecisionDetails.aspx?ID=8179"
       ],
-      "notes": "VERIFIED 13 Jul 2026: Full Council decision 26 Feb 2025 — publish CIA for Shoreditch, designate Dalston a Special Consideration Area, SoLP revised to reference both, effective 1 Apr 2025. The council's own licensing policy page (checked 13 Jul 2026) still shows only the 2023 SoLP PDF with no CIA mention — evidence of the aggregation gap."
+      "notes": "VERIFIED 13 Jul 2026: Full Council decision 26 Feb 2025 — publish CIA for Shoreditch, designate Dalston a Special Consideration Area, SoLP revised to reference both, effective 1 Apr 2025. Re-checked 20 Jul 2026: the council's licensing policy page STILL shows only the 2023 SoLP (now served as a Google Drive PDF link) with no mention of either designation — 15+ months on."
     },
     {
       "id": "camden",
@@ -128,7 +129,7 @@
       "live_consultation": { "open": false },
       "sources": [
         "https://www.manchester.gov.uk/licences-and-permissions/statement-of-licensing-policy2",
-        "https://manchester.gov.uk/download/downloads/id/29293/statement_of_licensing_policy_-_2024_to_2029.pdf"
+        "https://www.manchester.gov.uk/__data/assets/file/0019/123265/statement_of_licensing_policy_-_2024_to_2029.pdf"
       ],
       "notes": "Deliberately open stance — useful contrast case for the tracker."
     },
@@ -145,7 +146,7 @@
         "https://www.bristol.gov.uk/licences-permits/licensing-policy",
         "https://bristol.citizenspace.com/licensing-regulatory-services/statement-of-licensing-policy/"
       ],
-      "notes": "Live licence review: El Rincón, 298 North Street, Bedminster (police-requested; application valid 18 Jun 2026, ref 26/03363/PRREV). Public representations close 16 Jul 2026; hearing date still TBC as of 13 Jul 2026."
+      "notes": "Live licence review: El Rincón, 298 North Street, Bedminster (police-requested; application valid 18 Jun 2026, ref 26/03363/PRREV). Representations closed 16 Jul 2026; hearing must be held within 20 working days, i.e. by 13 Aug 2026. No hearing listing found as of 20 Jul 2026 — check democracy.bristol.gov.uk Licensing (Hearings) Sub-Committee calendar."
     },
     {
       "id": "birmingham",
@@ -159,7 +160,7 @@
         "https://www.birmingham.gov.uk/info/20081/licensing/296/statement_of_licensing_policy",
         "https://www.popall.co.uk/news-publications/news/midlands-council-removes-cumulative-impact-policies-under-new-interim-licensing-policy"
       ],
-      "notes": "NEEDS VERIFICATION: prior claim of a new policy effective 1 May 2026 with Broad Street CIP carried forward could not be confirmed (13 Jul 2026) — council SoLP page still shows the July 2015 policy; Poppleston Allen reported CIPs (Broad Street, Hurst St/Arcadian, Central Moseley, Erdington, Digbeth) removed under the 2020 interim policy. Manual check of committee papers (CMIS) needed."
+      "notes": "NEEDS VERIFICATION: prior claim of a new policy effective 1 May 2026 with Broad Street CIP carried forward could not be confirmed. Re-checked 20 Jul 2026: council SoLP page still lists the July 2015 policy as current; Poppleston Allen reported CIPs (Broad Street, Hurst St/Arcadian, Central Moseley, Erdington, Digbeth) removed under the 2020 interim policy. Manual check of committee papers (CMIS) needed."
     },
     {
       "id": "leeds",
@@ -172,7 +173,7 @@
       "next_review_due": "2028",
       "sources": [
         "https://www.leeds.gov.uk/licensing/licensing-policies",
-        "https://www.leeds.gov.uk/licensing/licensing-policies/statement-of-licensing-policy"
+        "https://www.leeds.gov.uk/licensing/statement-of-licensing-policy"
       ],
       "notes": "Full 232-page CIA only available by email request (entertainment.licensing@leeds.gov.uk) — good example of how scattered/inaccessible this data is."
     },
@@ -203,7 +204,7 @@
         "https://liverpool.gov.uk/council/strategies-plans-and-policies/licensing/licensing-policy-statement",
         "https://www.popall.co.uk/news-publications/news/liverpool-city-council-becomes-latest-authority-to-remove-their-cumulative-impact-policy-areas"
       ],
-      "notes": "SoLP renewal consultation should surface in 2026 — high-priority watch item for the weekly agent. Link fix 13 Jul 2026: previous source URL pointed at the council's enforcement-of-regulations policy page; replaced with the canonical Licensing Policy Statement page (still shows the 20 Jan 2021 policy — no renewal consultation live as of 13 Jul 2026)."
+      "notes": "SoLP renewal consultation should surface in 2026 — high-priority watch item for the weekly agent. Link fix 13 Jul 2026: previous source URL pointed at the council's enforcement-of-regulations policy page; replaced with the canonical Licensing Policy Statement page. Re-checked 20 Jul 2026: page still shows the 20 Jan 2021 policy (2021–26) — no renewal consultation live."
     },
     {
       "id": "brighton-hove",

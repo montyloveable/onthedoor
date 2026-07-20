@@ -1,16 +1,31 @@
 {
   "meta": {
     "dataset": "On The Door — live notice board",
-    "generated": "2026-07-13",
+    "generated": "2026-07-20",
     "types": ["consultation", "licence_review", "closure", "policy_change", "court"],
     "counters": {
-      "open_consultations": 1,
+      "open_consultations": 2,
       "reviews_this_month": 1,
       "closures_this_quarter": 0
     },
-    "counter_notes": "Reviews this month (Jul 2026): El Rincón pending (Pier One was decided 30 Jun, i.e. last month). Closures this quarter (Q3 2026, from 1 Jul): none recorded — Corsica Studios closed 29 Mar 2026 (Q1)."
+    "counter_notes": "Open consultations (20 Jul 2026): Westminster SoLP 2026 (closes 9 Aug) + Home Office national consultation on longer premises closure orders (closes 31 Jul). Reviews this month (Jul 2026): El Rincón pending — representations closed 16 Jul, hearing must be held within 20 working days (by 13 Aug). Closures this quarter (Q3 2026, from 1 Jul): none recorded — Corsica Studios closed 29 Mar 2026 (Q1)."
   },
   "notices": [
+    {
+      "id": "ho-closure-orders-2026",
+      "type": "consultation",
+      "status": "OPEN",
+      "direction": "tightening",
+      "authority": "Home Office (national)",
+      "headline": "Home Office consults on longer premises closure orders — 11 days left to respond",
+      "detail": "Using new powers in the Crime and Policing Act 2026, the Home Office is consulting on increasing the maximum duration of premises closure orders under s.80 of the Anti-social Behaviour, Crime and Policing Act 2014, the maximum extension period under s.82, and the maximum overall duration of an extended order. Police and councils use these orders against premises linked to nuisance, disorder or crime. Consultation closes 31 July 2026.",
+      "date": "2026-07-03",
+      "deadline": "2026-07-31",
+      "sources": [
+        "https://www.localgovernmentlawyer.co.uk/community-safety/393-community-safety-news/100995-home-office-consults-on-increasing-length-of-closure-orders",
+        "https://www.gov.uk/government/consultations/premises-closure-orders"
+      ]
+    },
     {
       "id": "wcc-solp-2026",
       "type": "consultation",
@@ -47,10 +62,10 @@
       "direction": "tightening",
       "authority": "Bristol",
       "venue": "El Rincón, 298 North Street, Bedminster",
-      "headline": "El Rincón review: public representations close 16 July — hearing date still to be listed",
-      "detail": "Avon & Somerset Police requested Bristol City Council review the North Street bar's premises licence, citing crime and disorder, public nuisance and public safety (application valid 18 Jun 2026, ref 26/03363/PRREV). Representations close 16 July 2026; the hearing must then be listed within 20 working days.",
+      "headline": "El Rincón review: representations closed 16 July — hearing must be held by 13 August, date not yet published",
+      "detail": "Avon & Somerset Police requested Bristol City Council review the North Street bar's premises licence, citing crime and disorder, public nuisance and public safety (application valid 18 Jun 2026, ref 26/03363/PRREV). Representations closed 16 July 2026; the hearing must be held within 20 working days — by 13 August 2026. No hearing listing found as of 20 Jul 2026.",
       "date": "2026-06-18",
-      "deadline": "2026-07-16",
+      "deadline": "2026-08-13",
       "sources": [
         "https://www.bristol247.com/food-and-drink/news-food-and-drink/bar-owner-asks-customers-support-police-request-licence-review/",
         "https://www.bristol247.com/wp-content/uploads/2026/06/El-Rincon-license-review.pdf"
