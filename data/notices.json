@@ -1,14 +1,14 @@
 {
   "meta": {
     "dataset": "On The Door — live notice board",
-    "generated": "2026-07-20",
+    "generated": "2026-07-27",
     "types": ["consultation", "licence_review", "closure", "policy_change", "court"],
     "counters": {
       "open_consultations": 2,
       "reviews_this_month": 1,
       "closures_this_quarter": 0
     },
-    "counter_notes": "Open consultations (20 Jul 2026): Westminster SoLP 2026 (closes 9 Aug) + Home Office national consultation on longer premises closure orders (closes 31 Jul). Reviews this month (Jul 2026): El Rincón pending — representations closed 16 Jul, hearing must be held within 20 working days (by 13 Aug). Closures this quarter (Q3 2026, from 1 Jul): none recorded — Corsica Studios closed 29 Mar 2026 (Q1)."
+    "counter_notes": "Open consultations (27 Jul 2026): Westminster SoLP 2026 (closes 9 Aug) + Home Office national consultation on longer premises closure orders (closes 11.59pm 31 Jul — FINAL WEEK). Reviews this month (Jul 2026): El Rincón pending — representations closed 16 Jul, hearing must be held within 20 working days (by 13 Aug); no hearing listed as of 27 Jul. Closures this quarter (Q3 2026, from 1 Jul): none recorded — Corsica Studios closed 29 Mar 2026 (Q1)."
   },
   "notices": [
     {
@@ -17,13 +17,28 @@
       "status": "OPEN",
       "direction": "tightening",
       "authority": "Home Office (national)",
-      "headline": "Home Office consults on longer premises closure orders — 11 days left to respond",
+      "headline": "Home Office consults on longer premises closure orders — closes 11.59pm Friday 31 July",
       "detail": "Using new powers in the Crime and Policing Act 2026, the Home Office is consulting on increasing the maximum duration of premises closure orders under s.80 of the Anti-social Behaviour, Crime and Policing Act 2014, the maximum extension period under s.82, and the maximum overall duration of an extended order. Police and councils use these orders against premises linked to nuisance, disorder or crime. Consultation closes 31 July 2026.",
       "date": "2026-07-03",
       "deadline": "2026-07-31",
       "sources": [
         "https://www.localgovernmentlawyer.co.uk/community-safety/393-community-safety-news/100995-home-office-consults-on-increasing-length-of-closure-orders",
-        "https://www.gov.uk/government/consultations/premises-closure-orders"
+        "https://www.gov.uk/government/consultations/premises-closure-orders",
+        "https://www.john-gaunt.co.uk/news/home-office-consult-on-extending-duration-of-closure-orders"
+      ]
+    },
+    {
+      "id": "camden-lnl-lnr-optout",
+      "type": "policy_change",
+      "status": "IN FORCE",
+      "direction": "tightening",
+      "authority": "Camden",
+      "headline": "Camden's Late Night Levy now reaches takeaways — free opt-out closes 31 August",
+      "detail": "Camden has retained its Late Night Levy with significant reform: it now applies not only to premises licensed to sell alcohol between 00:00 and 06:00, but also to premises licensed for late night refreshment between 00:00 and 05:00. Operators can opt out by submitting a minor variation reducing their LNR hours — free of charge if emailed to licensing@camden.gov.uk by 31 August 2026. Miss the date and the premises becomes liable, charged pro rata from the licence anniversary. NYE-only extended hours are exempt.",
+      "date": "2026-07-24",
+      "deadline": "2026-08-31",
+      "sources": [
+        "https://www.popall.co.uk/news-publications/news/camden-to-allow-late-night-refreshment-premises-the-opportunity-to-opt-out-of-the-late-night-levy"
       ]
     },
     {
@@ -63,7 +78,7 @@
       "authority": "Bristol",
       "venue": "El Rincón, 298 North Street, Bedminster",
       "headline": "El Rincón review: representations closed 16 July — hearing must be held by 13 August, date not yet published",
-      "detail": "Avon & Somerset Police requested Bristol City Council review the North Street bar's premises licence, citing crime and disorder, public nuisance and public safety (application valid 18 Jun 2026, ref 26/03363/PRREV). Representations closed 16 July 2026; the hearing must be held within 20 working days — by 13 August 2026. No hearing listing found as of 20 Jul 2026.",
+      "detail": "Avon & Somerset Police requested Bristol City Council review the North Street bar's premises licence, citing crime and disorder, public nuisance and public safety (application valid 18 Jun 2026, ref 26/03363/PRREV). Representations closed 16 July 2026; the hearing must be held within 20 working days — by 13 August 2026. No hearing listing found as of 27 Jul 2026.",
       "date": "2026-06-18",
       "deadline": "2026-08-13",
       "sources": [
