@@ -301,20 +301,20 @@
 /* ══════════════════════════════════════════════════════════════
    DATA — generated from data/councils.json + data/notices.json
    Regenerate this block from those files on each weekly update.
-   Dataset date: 2026-07-20
+   Dataset date: 2026-07-27
    ══════════════════════════════════════════════════════════════ */
-const DATA_DATE = "20 July 2026";
+const DATA_DATE = "27 July 2026";
 
 const COUNTERS = [
   {num:16, cls:"",      label:"Authorities tracked",         href:"#authorities"},
-  {num:2,  cls:"stamp", label:"Open consultations",          href:"https://www.gov.uk/government/consultations/premises-closure-orders", ext:true, title:"Home Office closure orders consultation closes 31 Jul; Westminster SoLP 2026 closes 9 Aug"},
+  {num:2,  cls:"stamp", label:"Open consultations",          href:"https://www.gov.uk/government/consultations/premises-closure-orders", ext:true, title:"Home Office closure orders consultation closes 11.59pm Fri 31 Jul; Westminster SoLP 2026 closes 9 Aug"},
   {num:1,  cls:"",      label:"Licence reviews this month",  href:"#board"},
   {num:0,  cls:"pulse", label:"Closures this quarter",       href:"#board"}
 ];
 
 const NOTICES = [
-  {act:"ASB, Crime & Policing Act 2014", borough:"Home Office", stamp:["open","Closes 31 Jul"],
-   body:"National consultation on longer premises closure orders: Home Office seeks views on raising the maximum duration and extension limits of closure orders used against venues.",
+  {act:"ASB, Crime & Policing Act 2014", borough:"Home Office", stamp:["open","Final week — closes 31 Jul"],
+   body:"National consultation on longer premises closure orders: Home Office seeks views on raising the maximum duration and extension limits of closure orders used against venues. Responses close 11.59pm Friday.",
    date:"Closes 31 Jul 2026",
    url:"https://www.gov.uk/government/consultations/premises-closure-orders"},
   {act:"Licensing Act 2003", borough:"Bristol", stamp:["review","Hearing by 13 Aug"],
@@ -325,10 +325,10 @@ const NOTICES = [
    body:"SoLP 2026 consultation live: West End CIZ trimmed, Edgware Rd & Queensway CIZs dropped, new Special Consideration Zones ring the core.",
    date:"Closes 9 Aug 2026",
    url:"https://www.westminster.gov.uk/licensing/licensing-policy-and-strategy/statement-licensing-policy"},
-  {act:"Licensing Act 2003", borough:"Hackney", stamp:["review","Now confirmed"],
-   body:"Shoreditch CIA confirmed in force since 1 Apr 2025; Dalston made a Special Consideration Area. The council's policy page still doesn't mention either.",
-   date:"Verified 13 Jul 2026",
-   url:"https://hackney.moderngov.co.uk/ieDecisionDetails.aspx?ID=8179"},
+  {act:"Late Night Levy", borough:"Camden", stamp:["open","Opt out by 31 Aug"],
+   body:"Camden's Late Night Levy now reaches late-night refreshment premises (00:00–05:00). Free opt-out via minor variation until 31 August — after that, you're paying pro rata.",
+   date:"Confirmed 24 Jul 2026",
+   url:"https://www.popall.co.uk/news-publications/news/camden-to-allow-late-night-refreshment-premises-the-opportunity-to-opt-out-of-the-late-night-levy"},
   {act:"Licensing Act 2003", borough:"Westminster", stamp:["review","Disputed"],
    body:"NTIA brands the CIA consultation potentially unlawful — claims the licensed trade wasn't properly told it was happening.",
    date:"Reported Apr 2026",
@@ -342,7 +342,7 @@ const NOTICES = [
 const AUTHORITIES = [
   {name:"Westminster", dir:"tightening", detail:"SoLP 2026 consultation open — West End CIZ kept (trimmed), Edgware Rd & Queensway CIZs dropped, new Special Consideration Zones.", meta:"Consultation closes 9 Aug 2026", url:"https://www.westminster.gov.uk/licensing/licensing-policy-and-strategy/statement-licensing-policy"},
   {name:"Hackney", dir:"tightening", detail:"Shoreditch CIA in force since 1 Apr 2025; Dalston is a Special Consideration Area. Not yet shown on the council's policy page.", meta:"SoLP to Aug 2028", url:"https://www.hackney.gov.uk/business-and-licensing/licensing/licensing-policy-alcohol-entertainment-and-late-night-refreshment"},
-  {name:"Camden", dir:"loosening", detail:"Camden Town & Seven Dials CIAs removed — insufficient evidence, committee ruled.", meta:"SoLP 2025–2030", url:"https://www.camden.gov.uk/licensing-policy"},
+  {name:"Camden", dir:"mixed", detail:"CIAs removed, but the Late Night Levy now extends to late-night refreshment premises — free opt-out closes 31 Aug 2026.", meta:"SoLP 2025–2030 · levy reformed", url:"https://www.camden.gov.uk/licensing-policy"},
   {name:"Tower Hamlets", dir:"mixed", detail:"Brick Lane CIA retained & expanded SE; Bethnal Green CIA removed.", meta:"CIA to Nov 2027", url:"https://talk.towerhamlets.gov.uk/cumulative-impact-policy-review-2024"},
   {name:"Islington", dir:"stable", detail:"Six CIAs in force incl. Archway. SoLP expires 2027 — renewal consultation likely late 2026.", meta:"SoLP 2023–2027 · WATCH", url:"https://www.islington.gov.uk/business/licences-permits-registration/alcohol-and-entertainment-licences/islington-licensing-policy"},
   {name:"Southwark", dir:"tightening", detail:"SoLP 2026–31 adopted: Borough & Bankside + Camberwell CIAs kept; late-night levy extension proposed.", meta:"SoLP 2026–2031", url:"https://www.southwark.gov.uk/sites/default/files/2026-04/Licensing-Act-2003-statement-of-licensing-policy-2026-to-2031.pdf"},
@@ -352,21 +352,21 @@ const AUTHORITIES = [
   {name:"Birmingham", dir:"stable", detail:"Policy status unverified — council page still lists the 2015 SoLP; CIPs removed under the 2020 interim policy.", meta:"NEEDS VERIFICATION", url:"https://www.birmingham.gov.uk/info/20081/licensing/296/statement_of_licensing_policy"},
   {name:"Leeds", dir:"tightening", detail:"CIA 2026–28 approved after Beeston addition and Headingley Lane expansion.", meta:"CIA 2026–2028", url:"https://www.leeds.gov.uk/licensing/licensing-policies"},
   {name:"Newcastle", dir:"stable", detail:"Five CIP areas (off-sales / late-night refreshment) in force since Nov 2023.", meta:"SoLP 2023–2028", url:"https://www.newcastle.gov.uk/services/licences-and-permits/licensing-act-2003-pages/licensing-act-2003-statement-licensing"},
-  {name:"Liverpool", dir:"loosening", detail:"All CIPs removed in 2021. SoLP renewal now due — no consultation live as of 13 Jul.", meta:"SoLP renewal due 2026 · WATCH", url:"https://liverpool.gov.uk/council/strategies-plans-and-policies/licensing/licensing-policy-statement"},
+  {name:"Liverpool", dir:"loosening", detail:"All CIPs removed in 2021. SoLP renewal now due — no consultation live as of 27 Jul.", meta:"SoLP renewal due 2026 · WATCH", url:"https://liverpool.gov.uk/council/strategies-plans-and-policies/licensing/licensing-policy-statement"},
   {name:"Brighton & Hove", dir:"mixed", detail:"CIZ replaced by City Safety Area — same map, softer presumption, safety-first matrix.", meta:"SoLP from 5 Jan 2026", url:"https://www.brighton-hove.gov.uk/business-and-trade/licensing-and-gambling/statement-licensing-policy-2026"},
-  {name:"Glasgow", dir:"stable", detail:"Overprovision areas in force under Licensing (Scotland) Act 2005 policy statement.", meta:"Policy 2023–2028 · Scots regime", url:"https://www.glasgow.gov.uk/article/8074/Licensing-Policy-Statement"},
+  {name:"Glasgow", dir:"stable", detail:"Overprovision areas in force under Licensing (Scotland) Act 2005 policy statement. New Night Time Economy Commission launched 13 Jul.", meta:"Policy 2023–2028 · Scots regime", url:"https://www.glasgow.gov.uk/article/8074/Licensing-Policy-Statement"},
   {name:"Edinburgh", dir:"loosening", detail:"Overprovision policy scrapped 5–3 (Jun 2025) — Old Town, Princes St, Tollcross, Leith St opened up.", meta:"Scots regime · contested vote", url:"https://www.edinburgh.gov.uk/licences-permits/edinburghs-licensing-board"}
 ];
 
 const CLIPS = [
+  {tag:"Levy", date:"24 Jul 26", text:"Camden extends its Late Night Levy to late-night refreshment premises — free opt-out via minor variation until 31 August.", source:"Popall"},
+  {tag:"Venue", date:"24 Jul 26", text:"Music Venue Properties acquires The Pipeline, Brighton — its tenth grassroots venue taken into community ownership.", source:"MVP"},
+  {tag:"Policy", date:"14 Jul 26", text:"Government launches 'Turn It Up: Our Plan for Music' — a long-term plan for UK music welcomed by the NTIA.", source:"Popall"},
+  {tag:"NTE", date:"13 Jul 26", text:"Glasgow launches its Night Time Economy Commission, chaired by Sub Club's Mike Grieve, plus Scotland's first council NTE Manager post.", source:"NTIA"},
   {tag:"Consult", date:"3 Jul 26", text:"Home Office consults on longer premises closure orders — responses close 31 July.", source:"LGL"},
   {tag:"Policy", date:"1 Jul 26", text:"Institute of Licensing publishes guidance for licensing teams facing local government reorganisation.", source:"IoL"},
-  {tag:"Hours", date:"Jun–Jul 26", text:"World Cup licensing hours order: England/Scotland knockout games earned pubs 2–3 extra hours — final included, but only if licensed to 11pm on a Sunday.", source:"Popall"},
   {tag:"Court", date:"16 Apr 26", text:"First-ever conviction for false statements under the Licensing Act 2003 — AI-written objections to Heaven's licence.", source:"11KBW"},
-  {tag:"Policy", date:"Apr 26", text:"Southwark publishes SoLP 2026–31: CIAs kept, wider late-night levy proposed.", source:"Southwark"},
-  {tag:"Closure", date:"29 Mar 26", text:"Corsica Studios closes for S106 refurb after 25 years at Elephant & Castle.", source:"Corsica"},
-  {tag:"Policy", date:"5 Jan 26", text:"Brighton's City Safety Area replaces the CIZ — presumption of refusal dropped.", source:"B&H CC"},
-  {tag:"Policy", date:"Nov 25", text:"Home Office & DBT publish the National Licensing Policy Framework — CIAs should be evidence-based, not blanket bans.", source:"LGL"}
+  {tag:"Closure", date:"29 Mar 26", text:"Corsica Studios closes for S106 refurb after 25 years at Elephant & Castle.", source:"Corsica"}
 ];
 
 const DIR_COLOR = {tightening:"#c1493f", stable:"#8ea3ab", loosening:"#3d7a52", mixed:"#d6547e"};
@@ -385,7 +385,7 @@ const GB_DOTS = [
   {name:"London",     dir:"tightening",x:236, y:418, lx:9,  ly:3}
 ];
 const LDN_DOTS = [
-  {name:"Camden",       dir:"loosening", x:200, y:80},
+  {name:"Camden",       dir:"mixed",     x:200, y:80},
   {name:"Islington",    dir:"stable",    x:232, y:64},
   {name:"Hackney",      dir:"tightening",x:262, y:84},
   {name:"Tower Hamlets",dir:"mixed",     x:262, y:110},
