@@ -1,257 +1,366 @@
 {
-  "meta": {
-    "dataset": "On The Door — pilot council sources registry",
-    "generated": "2026-07-27",
-    "regime_note": "England & Wales: Cumulative Impact Policies/Assessments under Licensing Act 2003 (CIAs renew every 3 years, SoLPs every 5). Scotland: overprovision assessments under Licensing (Scotland) Act 2005.",
-    "status_key": {
-      "tightening": "New/expanded CIA, SCZ, or live consultation likely to restrict",
-      "stable": "Policy in force, no active change",
-      "loosening": "CIA/overprovision removed or presumption of refusal dropped",
-      "mixed": "Simultaneous tightening and loosening moves"
-    }
+ "meta": {
+  "dataset": "On The Door — pilot council sources registry",
+  "generated": "2026-10-01",
+  "regime_note": "England & Wales: Cumulative Impact Policies/Assessments under Licensing Act 2003 (CIAs renew every 3 years, SoLPs every 5). Scotland: overprovision assessments under Licensing (Scotland) Act 2005. London boroughs: the Mayor of London's strategic licensing powers under the English Devolution and Community Empowerment Act 2026 CAME INTO FORCE ON 29 JUNE 2026, two months after Royal Assent. In force now: a statutory duty on every London licensing authority to consult the Mayor when determining or revising its Statement of Licensing Policy, and a Responsible Authority role for the GLA (City Hall can make representations on individual applications and appeal to the magistrates' court). Still awaited: the London-wide Strategic Licensing Policy itself and the Mayor's call-in power over strategically important decisions — both require secondary legislation the government says will be laid later in 2026. (Checked 1 Oct 2026: the GLA project page still describes the powers in the future tense and still says the call-in secondary legislation is 'expected to be laid and passed later this year'; no instrument found.)",
+  "status_key": {
+   "tightening": "New/expanded CIA, SCZ, or live consultation likely to restrict",
+   "stable": "Policy in force, no active change",
+   "loosening": "CIA/overprovision removed or presumption of refusal dropped",
+   "mixed": "Simultaneous tightening and loosening moves"
+  }
+ },
+ "councils": [
+  {
+   "id": "westminster",
+   "name": "Westminster City Council",
+   "region": "London",
+   "direction": "mixed",
+   "policy": "Statement of Licensing Policy October 2026 ADOPTED by Full Council 16 Sep 2026, published 28 Sep, IN FORCE 1 OCT 2026 (verified on the council's own page). West End CIZ RETAINED but REDUCED on its western, eastern and northern edges (substantial parts of Covent Garden, Mayfair and north of Oxford Street taken out); Core Hours reworded as 'reference points rather than fixed limits'; new definition of 'Vertical Drinking' (little or no seating, customers predominantly stand) retained despite the backlash; VAWG and Martyn's Law provisions; expanded Good Operator Guidance (Sep 2026). Council commits to a 12-18 month review of the CIZ and Core Hours evidence base and an industry expert panel. The Mayor had asked for the CIZ to be dropped entirely - not followed.",
+   "cia_zones": [
+    "West End CIZ (retained, reduced on W/E/N edges - in force 1 Oct 2026)",
+    "Mayfair / Victoria special zones (reported in the draft; NEEDS VERIFICATION against the adopted 121-page policy)",
+    "Edgware Road and Queensway/Bayswater CIZs (draft proposed removal; NEEDS VERIFICATION against the adopted policy)"
+   ],
+   "live_consultation": {
+    "open": false,
+    "closed": "2026-08-09",
+    "subject": "SoLP 2026 consultation closed 9 Aug (690 responses vs 170 in 2021); policy adopted 16 Sep, in force 1 Oct 2026"
+   },
+   "sources": [
+    "https://www.westminster.gov.uk/licensing/licensing-policy-and-strategy/statement-licensing-policy",
+    "https://www.westminster.gov.uk/sites/default/files/media/documents/statement-of-licensing-policy-october-2026.pdf",
+    "https://www.westminster.gov.uk/sites/default/files/media/documents/good-operator-guidance-september-2026.pdf",
+    "https://www.popall.co.uk/news-publications/news/westminster-city-council-adopts-new-statement-of-licensing-policy-2026",
+    "https://www.morningadvertiser.co.uk/Article/2026/09/17/westminster-adopts-revised-licensing-policy-after-backlash/",
+    "https://catererlicensee.com/westminster-council-adopts-revised-statement-of-licensing-policy/",
+    "https://www.morningadvertiser.co.uk/Article/2026/09/09/westminster-keeps-vertical-drinking-policy-despite-backlash/",
+    "https://catererlicensee.com/khan-urges-westminster-to-scrap-outdated-licensing-rules-in-fresh-nightlife-row/",
+    "https://www.thecaterer.com/news/sadiq-khan-tells-westminster-council-to-rethink-licensing-proposals",
+    "https://www.hospitality-week.co.uk/news/pubs-and-bars/sadiq-khan-calls-for-changes-to-westminster-licensing-policy-draft/",
+    "https://www.westminster.gov.uk/news/standing-pubs-myth-busting",
+    "https://storymaps.arcgis.com/stories/97f162599a254a0ca19f4aba396b9b21",
+    "https://www.westminster.gov.uk/sites/default/files/media/documents/direction-of-travel-statement-of-licensing-policy-march-2026.pdf",
+    "https://www.westminster.gov.uk/licensing/licensing-policy-and-strategy",
+    "https://www.westminster.gov.uk/licensing/licensing-policy-and-strategy/cumulative-impact-assessment",
+    "https://www.woodswhur.co.uk/westminster-city-councils-statement-of-licensing-policy-consultation-and-cumulative-impact-assessment-an-overview/",
+    "https://fitzrovianews.com/2026/07/03/westminster-council-seeks-views-on-the-2026-revision-of-its-licensing-policy/"
+   ],
+   "notes": "1 OCT 2026 - ADOPTED, AND THE PAGE IS FINALLY UNFROZEN. Full Council adopted the Statement of Licensing Policy 2026 on 16 SEPTEMBER; published 28 Sep (council page) and IN FORCE TODAY, 1 OCTOBER 2026 - so the long-flagged 1 Oct date is now VERIFIED on the council's own page and the flag is closed. The SoLP page was updated 29 Sep: it now carries the October 2026 policy (PDF, 121pp), Good Operator Guidance Sept 2026 and the 2021 policy 'until 1 October'. Small aggregation-gap exhibit: the rewritten page refers to 'the Licensing Act 2033'. WHAT CHANGED (Poppleston Allen 17 Sep; Morning Advertiser 17 Sep; CLH 18 Sep): West End CIZ shrunk on W/E/N edges; Core Hours now 'reference points rather than fixed limits'; vertical drinking definition retained; VAWG + Martyn's Law; enforcement detail; 690 responses vs 170 in 2021 (council report attributes the rise partly to 'misunderstandings'); council calls the policy 'broadly similar' to 2021 because of the compressed statutory timetable and commits to a 12-18 month review of the CIZ and Core Hours evidence plus an industry expert panel. Committee papers published 7 Sep (MA 9 Sep, citing the Guardian): 81% of respondents disagreed with the CIZ and 84% said the policy would be bad for business. THE MAYOR: asked for the CIZ to go entirely; it stays, smaller. Khan (MA 9 Sep): 'breathtaking arrogance... They would rather see nightlife die than thrive', and backed the call-in power. Cllr Tim Barnes: called on the Mayor to reverse Met licensing team cuts, extend night buses and run a Thursday Night Tube. DIRECTION CHANGE tightening -> MIXED: this is a NEW EVENT (adoption), not a correction - smaller CIZ and benchmark-only core hours are loosening moves, while the retained vertical-drinking definition and seating/table-service steer tighten. NOT YET VERIFIED from the adopted document itself (121pp, 28MB; could not be text-extracted this run): whether Edgware Road / Queensway CIZs were removed as drafted and whether Mayfair / Victoria special zones survived. Also 9 Sep: Trisha's (New Evaristo Club, Greek St) granted 2am inside the CIZ over a Met objection; Mistress of Mayfair kept its licence on review with conditions. || 1 SEP 2026 - OUR TOP WATCH QUESTION IS ANSWERED, AND WE HAD MISSED THE ANSWER. Last run we recorded as NEEDS VERIFICATION whether Westminster had consulted the Mayor and what he said, and wrote that nothing on any council page addressed it. The council pages still don't. But the Mayor had already written, and it was reported on 10 AUGUST 2026 - two weeks before our last run. We were interrogating council websites and not the trade press on that specific question. Recording the miss rather than quietly filling it in. WHAT HE ASKED FOR: Sir Sadiq Khan wrote to the Conservative-run council asking it to lift its core hours restrictions and to DROP THE CUMULATIVE IMPACT POLICY ENTIRELY - the West End CIZ, the most closely watched cumulative impact area in the country - arguing the council should set out a vision for the growth it wants rather than a list of activity it wants to limit. Evidence he deployed: London nightlife supports 600,000+ jobs and adds upwards of GBP 21bn to the UK economy annually; and Home Office figures showing only 41 licence applications were made in the West End cumulative impact area in 2023-24, of which just 16 were approved. He named MANCHESTER - no core hours policy, no cumulative impact policy - as the model, which is the contrast this dataset has drawn since launch. He accused the council of letting licensing decisions be shaped disproportionately by a small number of vocal residents and councillors. NEW DRAFT DETAIL not previously in this entry, from the same coverage: preferential treatment for operators closing by 10pm, with newly licensed pubs stopping service at 10pm and new nightclubs closing 11.30pm weekdays and midnight weekends; and separate special policy areas proposed for MAYFAIR and VICTORIA. Treated as reported, not verified against the draft. WESTMINSTER'S REPLY: deputy leader Cllr Tim Barnes said licensing is not the primary concern operators raise - central government costs, bills and staffing are - and pointed to reduced policing and gaps in late-night public transport, both within the Mayor's own remit. PAGE STILL FROZEN, FOURTH CONSECUTIVE CHECK. Fetched in full 1 Sep: last updated 29 June; opens 'Westminster City Council is consulting on proposed changes'; still states 'The consultation closes on 9 August at 5pm' in the present tense with the Commonplace documents and the survey both linked live. Twenty-three days after it closed. It also still serves the October 2021 policy as current. STILL NEEDS VERIFICATION: the 1 Oct 2026 adoption date. Trade coverage now describes the draft as being consulted on 'ahead of its planned introduction on 1 October 2026', which strengthens it, but no council page confirms it and the council's own 4 Mar 2026 release spoke of developing updated policies 'over the coming year'. Not asserted.",
+   "next_review_due": "12-18 month review of CIZ + Core Hours evidence promised (to ~early 2028) · SoLP 2031"
   },
-  "councils": [
-    {
-      "id": "westminster",
-      "name": "Westminster City Council",
-      "region": "London",
-      "direction": "tightening",
-      "policy": "SoLP consultation open for 2026 revision; draft keeps West End CIZ (slightly reduced NE of Covent Garden), REMOVES the Edgware Road and Queensway/Bayswater CIZs, adds large new Special Consideration Zones, and reworks Core Hours by premises type",
-      "cia_zones": ["West End Stress Area / CIZ", "proposed Special Consideration Zones (draft)", "Edgware Road CIZ (proposed removal)", "Queensway/Bayswater CIZ (proposed removal)"],
-      "live_consultation": {
-        "open": true,
-        "closes": "2026-08-09",
-        "subject": "Statement of Licensing Policy 2026 + Cumulative Impact Assessment"
-      },
-      "sources": [
-        "https://www.westminster.gov.uk/licensing/licensing-policy-and-strategy/statement-licensing-policy",
-        "https://www.westminster.gov.uk/licensing/licensing-policy-and-strategy",
-        "https://www.westminster.gov.uk/licensing/licensing-policy-and-strategy/cumulative-impact-assessment",
-        "https://fitzrovianews.com/2026/07/03/westminster-council-seeks-views-on-the-2026-revision-of-its-licensing-policy/",
-        "https://www.woodswhur.co.uk/westminster-city-councils-statement-of-licensing-policy-consultation-and-cumulative-impact-assessment-an-overview/"
-      ],
-      "notes": "NTIA has publicly branded the consultation potentially unlawful (April 2026) — live dispute; no escalation or legal challenge found as of 27 Jul 2026. SoLP page re-fetched 27 Jul (last updated 29 Jun): consultation live, Commonplace documents + survey linked, closes 5pm 9 Aug — 13 days out. LINK NOTE 20 Jul 2026: the consultation itself lives on the Statement of Licensing Policy subpage (updated 29 Jun 2026, links to Commonplace documents + survey, closes 5pm 9 Aug); the council's Cumulative Impact Assessment subpage still shows only the 2023 CIA (last updated Aug 2024) — the 2026 CIA was published as an ArcGIS storymap instead. Another aggregation-gap exhibit."
-    },
-    {
-      "id": "hackney",
-      "name": "Hackney Council",
-      "region": "London",
-      "direction": "tightening",
-      "policy": "SoLP effective 1 Aug 2023 (max 5 yrs, review due by Aug 2028). CIA for Shoreditch PUBLISHED and Dalston designated a Special Consideration Area — decision 26 Feb 2025, effective 1 Apr 2025. Council's licensing policy page still does not reference either designation",
-      "cia_zones": ["Shoreditch (CIA in force since 1 Apr 2025)", "Dalston (Special Consideration Area, not a CIA)"],
-      "live_consultation": { "open": false },
-      "sources": [
-        "https://www.hackney.gov.uk/business-and-licensing/licensing/licensing-policy-alcohol-entertainment-and-late-night-refreshment",
-        "https://consultation.hackney.gov.uk/public-realm/cumulative-impact-assessment-consultation/",
-        "https://hackney.moderngov.co.uk/ieDecisionDetails.aspx?ID=8179"
-      ],
-      "notes": "VERIFIED 13 Jul 2026: Full Council decision 26 Feb 2025 — publish CIA for Shoreditch, designate Dalston a Special Consideration Area, SoLP revised to reference both, effective 1 Apr 2025. Re-checked 20 Jul 2026: the council's licensing policy page STILL shows only the 2023 SoLP (now served as a Google Drive PDF link) with no mention of either designation — 15+ months on. 27 Jul: page still resolving; no change signal found."
-    },
-    {
-      "id": "camden",
-      "name": "Camden Council",
-      "region": "London",
-      "direction": "mixed",
-      "policy": "SoLP 2025–2030 adopted; cumulative impact areas (Camden Town, Seven Dials) REMOVED — committee found insufficient evidence for a CIA. BUT Late Night Levy retained and EXTENDED to late night refreshment premises (00:00–05:00); free opt-out via minor variation until 31 Aug 2026",
-      "cia_zones": [],
-      "live_consultation": { "open": false },
-      "sources": [
-        "https://www.camden.gov.uk/licensing-policy",
-        "https://www.camden.gov.uk/documents/d/guest/camden-statement-of-licensing-policy-2025-to-2030",
-        "https://consultations.wearecamden.org/supporting-communities/licensingpolicy/",
-        "https://www.popall.co.uk/news-publications/news/camden-to-allow-late-night-refreshment-premises-the-opportunity-to-opt-out-of-the-late-night-levy"
-      ],
-      "notes": "DIRECTION CHANGE 27 Jul 2026: loosening → mixed. CIA removal (loosening) now sits alongside the adopted Late Night Levy extension to LNR premises (tightening) — Poppleston Allen reported 24 Jul that Camden confirmed the opt-out route: fee-free minor variation to cut LNR hours if emailed to licensing@camden.gov.uk by 31 Aug 2026; after that, levy charged pro rata from licence anniversary; NYE-only extensions exempt. Resident groups (Camden Town TRAs) remain unhappy about CIA removal."
-    },
-    {
-      "id": "tower-hamlets",
-      "name": "Tower Hamlets Council",
-      "region": "London",
-      "direction": "mixed",
-      "policy": "CIA 2024–2027 in force (20 Nov 2024 – 20 Nov 2027): Brick Lane CIA retained and expanded SE; Bethnal Green CIA removed",
-      "cia_zones": ["Brick Lane (expanded)"],
-      "live_consultation": { "open": false },
-      "next_review_due": "2027-11",
-      "sources": [
-        "https://talk.towerhamlets.gov.uk/cumulative-impact-policy-review-2024",
-        "https://democracy.towerhamlets.gov.uk/mgIssueHistoryHome.aspx?IId=150969&PlanId=698&RPID=0"
-      ],
-      "notes": "3-year CIA cycle — next review consultation likely mid-2027."
-    },
-    {
-      "id": "islington",
-      "name": "Islington Council",
-      "region": "London",
-      "direction": "stable",
-      "policy": "SoLP 2023–2027 in force with six cumulative impact areas incl. Archway; review due 2027",
-      "cia_zones": ["Six CIAs incl. Archway (see SoLP for full list)"],
-      "live_consultation": { "open": false },
-      "next_review_due": "2027",
-      "sources": [
-        "https://www.islington.gov.uk/business/licences-permits-registration/alcohol-and-entertainment-licences/islington-licensing-policy"
-      ],
-      "notes": "2027 SoLP renewal is a watch item — consultation likely late 2026/early 2027."
-    },
-    {
-      "id": "southwark",
-      "name": "Southwark Council",
-      "region": "London",
-      "direction": "tightening",
-      "policy": "SoLP 2026–2031 adopted (early 2026) with dedicated CIA chapter: Borough & Bankside CIA, Camberwell CIA; proposal to extend Late Night Levy to late-night refreshment premises (00:00–06:00)",
-      "cia_zones": ["Borough & Bankside", "Camberwell"],
-      "live_consultation": { "open": false, "subject": "SoLP consultation ran 19 Sep – 31 Oct 2025" },
-      "sources": [
-        "https://www.southwark.gov.uk/sites/default/files/2026-04/Licensing-Act-2003-statement-of-licensing-policy-2026-to-2031.pdf",
-        "https://engage.southwark.gov.uk/projects/southwark-s-licensing-policy-2026-2031-consultation"
-      ],
-      "notes": "114 LNR premises in CIAs; levy extension worth ~£127k. Corsica Studios closure (Mar 2026) sits in this borough."
-    },
-    {
-      "id": "lambeth",
-      "name": "Lambeth Council",
-      "region": "London",
-      "direction": "stable",
-      "policy": "SoLP 2024–2029 in force (30 Jan 2024 – 29 Jan 2029); cumulative impact policy covers part of Clapham High Street with rebuttable presumption of refusal",
-      "cia_zones": ["Clapham High Street (part)"],
-      "live_consultation": { "open": false },
-      "sources": [
-        "https://www.lambeth.gov.uk/business-rates-services-licensing/licensing-permits/licensing-policy",
-        "https://www.lambeth.gov.uk/sites/default/files/2024-06/Licensing%20Policy%202024-29%20Lambeth.pdf"
-      ],
-      "notes": ""
-    },
-    {
-      "id": "manchester",
-      "name": "Manchester City Council",
-      "region": "North West",
-      "direction": "stable",
-      "policy": "SoLP 2024–2029 in force; NO cumulative impact assessment — flexible merits-based approach with 'late night economy' phase defined (00:00–04:00+)",
-      "cia_zones": [],
-      "live_consultation": { "open": false },
-      "sources": [
-        "https://www.manchester.gov.uk/licences-and-permissions/statement-of-licensing-policy2",
-        "https://www.manchester.gov.uk/__data/assets/file/0019/123265/statement_of_licensing_policy_-_2024_to_2029.pdf"
-      ],
-      "notes": "Deliberately open stance — useful contrast case for the tracker."
-    },
-    {
-      "id": "bristol",
-      "name": "Bristol City Council",
-      "region": "South West",
-      "direction": "stable",
-      "policy": "SoLP 2025–2030 effective 1 Aug 2025; CIA in effect from 8 Mar 2024 (city centre retained after 2023 near-removal; Bedminster/Southville CIA consulted separately)",
-      "cia_zones": ["City centre", "Bedminster & Southville (consulted)"],
-      "live_consultation": { "open": false },
-      "next_review_due": "2027-03 (CIA 3-yr cycle)",
-      "sources": [
-        "https://www.bristol.gov.uk/licences-permits/licensing-policy",
-        "https://bristol.citizenspace.com/licensing-regulatory-services/statement-of-licensing-policy/"
-      ],
-      "notes": "Live licence review: El Rincón, 298 North Street, Bedminster (police-requested; application valid 18 Jun 2026, ref 26/03363/PRREV). Representations closed 16 Jul 2026; hearing must be held within 20 working days, i.e. by 13 Aug 2026. Still no hearing listing found as of 27 Jul 2026 — sub-committees sit fortnightly on Thursdays; check democracy.bristol.gov.uk Licensing (Hearings) Sub-Committee calendar. MANUAL WATCH."
-    },
-    {
-      "id": "birmingham",
-      "name": "Birmingham City Council",
-      "region": "West Midlands",
-      "direction": "stable",
-      "policy": "Policy status UNVERIFIED: council's SoLP page (checked 13 Jul 2026) still lists the July 2015 policy as current; cumulative impact special policy areas (incl. Broad Street) were removed in the 2020 interim policy pending a full CIA. No evidence found for the previously reported 1 May 2026 policy",
-      "cia_zones": [],
-      "live_consultation": { "open": false },
-      "sources": [
-        "https://www.birmingham.gov.uk/info/20081/licensing/296/statement_of_licensing_policy",
-        "https://www.popall.co.uk/news-publications/news/midlands-council-removes-cumulative-impact-policies-under-new-interim-licensing-policy"
-      ],
-      "notes": "NEEDS VERIFICATION: prior claim of a new policy effective 1 May 2026 with Broad Street CIP carried forward could not be confirmed. Re-checked 20 Jul 2026: council SoLP page still lists the July 2015 policy as current; Poppleston Allen reported CIPs (Broad Street, Hurst St/Arcadian, Central Moseley, Erdington, Digbeth) removed under the 2020 interim policy. Manual check of committee papers (CMIS) needed. 27 Jul: a promising Birmingham Be Heard Citizen Space page on CIA areas (Digbeth) turned out to be from 2016 — flag stays."
-    },
-    {
-      "id": "leeds",
-      "name": "Leeds City Council",
-      "region": "Yorkshire",
-      "direction": "tightening",
-      "policy": "CIA 2026–2028 approved by Licensing Committee Jan 2026; Beeston CIA added Jan 2025; expanded again 2025 to include Hyde Park end of Headingley Lane",
-      "cia_zones": ["City centre", "Beeston (new 2025)", "Headingley Lane / Hyde Park (expanded 2025)"],
-      "live_consultation": { "open": false },
-      "next_review_due": "2028",
-      "sources": [
-        "https://www.leeds.gov.uk/licensing/licensing-policies",
-        "https://www.leeds.gov.uk/licensing/statement-of-licensing-policy"
-      ],
-      "notes": "Full 232-page CIA only available by email request (entertainment.licensing@leeds.gov.uk) — good example of how scattered/inaccessible this data is."
-    },
-    {
-      "id": "newcastle",
-      "name": "Newcastle City Council",
-      "region": "North East",
-      "direction": "stable",
-      "policy": "SoLP 2023–2028 in force (from 1 Nov 2023); review introduced 5 new cumulative impact policy areas for off-licences and late-night refreshment",
-      "cia_zones": ["5 CIP areas (off-sales / LNR focused)"],
-      "live_consultation": { "open": false },
-      "next_review_due": "2028",
-      "sources": [
-        "https://www.newcastle.gov.uk/services/licences-and-permits/licensing-act-2003-pages/licensing-act-2003-statement-licensing"
-      ],
-      "notes": ""
-    },
-    {
-      "id": "liverpool",
-      "name": "Liverpool City Council",
-      "region": "North West",
-      "direction": "loosening",
-      "policy": "All cumulative impact policy areas REMOVED at 2021 policy review; SoLP approved 20 Jan 2021 — 5-year renewal is now due/overdue (2026)",
-      "cia_zones": [],
-      "live_consultation": { "open": false },
-      "next_review_due": "2026 (SoLP renewal due — WATCH)",
-      "sources": [
-        "https://liverpool.gov.uk/council/strategies-plans-and-policies/licensing/licensing-policy-statement",
-        "https://www.popall.co.uk/news-publications/news/liverpool-city-council-becomes-latest-authority-to-remove-their-cumulative-impact-policy-areas"
-      ],
-      "notes": "SoLP renewal consultation should surface in 2026 — high-priority watch item for the weekly agent. Link fix 13 Jul 2026: previous source URL pointed at the council's enforcement-of-regulations policy page; replaced with the canonical Licensing Policy Statement page. Re-checked 20 Jul 2026: page still shows the 20 Jan 2021 policy (2021–26) — no renewal consultation live. 27 Jul: still nothing — note the council's live May–Jul 2026 consultation on SELECTIVE (landlord) licensing is a different regime, not the SoLP."
-    },
-    {
-      "id": "brighton-hove",
-      "name": "Brighton & Hove City Council",
-      "region": "South East",
-      "direction": "mixed",
-      "policy": "SoLP 2026 adopted 18 Dec 2025, effective 5 Jan 2026: CIZ scrapped and replaced with City Safety Area (same boundary, no blanket presumption of refusal, matrix-based scrutiny); Special Stress Area retained; new 'good operator' policy",
-      "cia_zones": ["City Safety Area (ex-CIZ)", "Special Stress Area"],
-      "live_consultation": { "open": false },
-      "sources": [
-        "https://www.brighton-hove.gov.uk/business-and-trade/licensing-and-gambling/statement-licensing-policy-2026",
-        "https://www.localgovernmentlawyer.co.uk/licensing/399-licensing-news/99461-city-council-ditches-cumulative-impact-zone-for-city-safe-area-in-new-licensing-approach-introduces-good-operator-policy"
-      ],
-      "notes": "First council to rebrand CIZ as a safety-first framework — a structural story, not just a boundary change."
-    },
-    {
-      "id": "glasgow",
-      "name": "City of Glasgow Licensing Board",
-      "region": "Scotland",
-      "direction": "stable",
-      "regime": "Licensing (Scotland) Act 2005 — overprovision, not CIP",
-      "policy": "Licensing Policy Statement 2023–2028 in force with proactive overprovision assessment; overprovision areas mapped on council site",
-      "cia_zones": ["Overprovision areas (see policy statement)"],
-      "live_consultation": { "open": false },
-      "next_review_due": "2028",
-      "sources": [
-        "https://www.glasgow.gov.uk/article/8074/Licensing-Policy-Statement",
-        "https://ntia.co.uk/new-night-time-economy-commission-sets-out-vision-for-glasgow/"
-      ],
-      "notes": "13 Jul 2026: Glasgow Night Time Economy Commission launched (chair Mike Grieve, Sub Club / SNTIA), backed by a new council-funded NTE Manager post — a first for Scotland — and £100k in the 2026–27 budget for the Night Time Action Plan. Overprovision policy itself unchanged; direction stays stable."
-    },
-    {
-      "id": "edinburgh",
-      "name": "City of Edinburgh Licensing Board",
-      "region": "Scotland",
-      "direction": "loosening",
-      "regime": "Licensing (Scotland) Act 2005 — overprovision, not CIP",
-      "policy": "Overprovision policy SCRAPPED by 5–3 board vote, 23 Jun 2025 (supplementary policy statement adopted after statutory consultation); former overprovision areas: Old Town, Princes Street, Tollcross, Leith Street",
-      "cia_zones": [],
-      "live_consultation": { "open": false },
-      "sources": [
-        "https://www.edinburgh.gov.uk/licences-permits/edinburghs-licensing-board",
-        "https://instituteoflicensing.org/network-news/edinburgh-licensing-board-scraps-overprovision-policy-in-split-vote/",
-        "https://dramscotland.co.uk/2025/08/12/edinburgh-licensing-board-ends-over-provision-policy/"
-      ],
-      "notes": "Police Scotland, NHS Lothian and Alcohol Focus Scotland gave evidence against removal — contested decision, follow-up story potential."
-    }
-  ]
+  {
+   "id": "hackney",
+   "name": "Hackney Council",
+   "region": "London",
+   "direction": "tightening",
+   "policy": "SoLP effective 1 Aug 2023 (max 5 yrs, review due by Aug 2028). CIA for Shoreditch PUBLISHED and Dalston designated a Special Consideration Area — decision 26 Feb 2025, effective 1 Apr 2025. Council's licensing policy page still does not reference either designation",
+   "cia_zones": [
+    "Shoreditch (CIA in force since 1 Apr 2025)",
+    "Dalston (Special Consideration Area, not a CIA)"
+   ],
+   "live_consultation": {
+    "open": false
+   },
+   "sources": [
+    "https://www.hackney.gov.uk/business-and-licensing/licensing/licensing-policy-alcohol-entertainment-and-late-night-refreshment",
+    "https://consultation.hackney.gov.uk/public-realm/cumulative-impact-assessment-consultation/",
+    "https://hackney.moderngov.co.uk/ieDecisionDetails.aspx?ID=8179"
+   ],
+   "notes": "1 OCT 2026 - NINETEEN MONTHS. Browser check: page text still contains no reference to cumulative impact, Shoreditch or Dalston. Sub-committees met 2, 8 and 15 Sep on new applications (incl. two Dalston premises) - no reviews found. || VERIFIED 13 Jul 2026: Full Council decision 26 Feb 2025 — publish CIA for Shoreditch, designate Dalston a Special Consideration Area, SoLP revised to reference both, effective 1 Apr 2025. Re-checked 20 Jul 2026: the council's licensing policy page STILL shows only the 2023 SoLP (now served as a Google Drive PDF link) with no mention of either designation — 15+ months on. 27 Jul: page still resolving; no change signal found. 17 Aug 2026: re-checked — page resolves and still shows only the 2023 SoLP with no mention of the Shoreditch CIA or Dalston SCA, now 16+ months on. A shorter canonical alias (hackney.gov.uk/licensing-policy/) also resolves to the same content. Note the Citizen Space path /licensing-and-regulatory-services/licensing-consultation/ is the 2015 consultation, not the CIA one — the CIA consultation lives under /public-realm/. 24 AUG 2026: re-checked, page resolves (both the long path and the hackney.gov.uk/licensing-policy/ alias) and still shows only the 2023 SoLP — effective 1 Aug 2023 for a maximum of five years — with no mention of the Shoreditch CIA or the Dalston SCA. Nearly 17 months on. 24 AUG 2026 (monthly run, browser check): page resolves and the full text was pulled. It has, if anything, got thinner — the extracted page now sets out what the policy covers, why the activities are licensed and how to apply, with no CIA reference, no SCA reference and no visible link to a dated policy document in the body. Seventeen months. Hackney is one of seven pilot London boroughs now under the Mayor's duty-to-consult (live 29 Jun 2026), which is the most likely lever for getting this page fixed. 1 SEP 2026: page fetched in full again. EIGHTEEN MONTHS and still no mention of the Shoreditch CIA or the Dalston Special Consideration Area anywhere in the body - what the policy covers, why the activities are licensed, how to apply, and nothing else. Worth recording precisely because the underlying policy document does say it: the SoLP itself states there are two Special Policy Areas in Hackney, Shoreditch and Dalston. So the council has published the designation in the document and not on the page that sends you to the document. Second governance oddity, noted again: the statutory Statement of Licensing Policy is served from a GOOGLE DRIVE share link rather than from the council's own domain. Hackney is one of seven pilot London boroughs now under the Mayor's duty-to-consult, which remains the most plausible lever for getting the page fixed. Link holds."
+  },
+  {
+   "id": "camden",
+   "name": "Camden Council",
+   "region": "London",
+   "direction": "mixed",
+   "policy": "SoLP 2025-2030 adopted; cumulative impact areas (Camden Town, Seven Dials) REMOVED - committee found insufficient evidence for a CIA. Late Night Levy retained and EXTENDED to late night refreshment premises (00:00-05:00); the fee-free opt-out window CLOSED 31 AUG 2026 and non-opted premises are now liable, pro rata from licence anniversary",
+   "cia_zones": [],
+   "live_consultation": {
+    "open": false
+   },
+   "sources": [
+    "https://www.camden.gov.uk/licensing-policy",
+    "https://www.camden.gov.uk/late-night-levy",
+    "https://www.camden.gov.uk/late-night-levy-review-consultation",
+    "https://www.camden.gov.uk/documents/d/guest/camden-statement-of-licensing-policy-2025-to-2030",
+    "https://consultations.wearecamden.org/supporting-communities/licensingpolicy/",
+    "https://www.popall.co.uk/news-publications/news/camden-to-allow-late-night-refreshment-premises-the-opportunity-to-opt-out-of-the-late-night-levy",
+    "https://northlondonnews.co.uk/local/camden/camden-nightclub-faces-licensing-crackdown-after-brawls-camden-2026/"
+   ],
+   "notes": "1 OCT 2026 - THE CAMDEN REVIEW DOWNGRADED. Second run without locating the sub-committee's own decision record; per last run's rule the notice is retired from the board and carried only as 'reported, unverified'. LNR opt-out take-up still unpublished (phone/FOI). Levy page re-read 1 Oct: 'late night refreshment' still absent. SoLP page resolves (2025-2030, expires 23 Jul 2030). || 1 SEP 2026 - THE DEADLINE PASSED AND THE COUNCIL'S PAGE NEVER MENTIONED IT. The fee-free opt-out from the extended Late Night Levy closed on Sunday 31 August 2026. Late night refreshment premises that did not submit a minor variation cutting their LNR hours are now liable, charged pro rata from their licence anniversary. camden.gov.uk/late-night-levy was pulled in full again on 1 September, the day after: it STILL runs only the 2016 alcohol-only scheme - 'All licence holders operating a licence which allows for the sale of alcohol between midnight and 6am are required to pay into the levy', the three exemptions, 'No other exemptions apply', the s.55A suspension warning. The phrase 'late night refreshment' does not appear on it once. No opt-out route, no deadline, at any point in the five weeks we checked it. This is now a completed aggregation-gap case study rather than a live warning. SECOND STALE CAMDEN PAGE, NEW THIS RUN: camden.gov.uk/late-night-levy-review-consultation is still in the present tense - 'We are now holding a 6-week public consultation' - and still says 'Your views will inform recommendations to Full Council in March 2026', six months after that Full Council sat and decided. Added as a source for exactly that reason. It does carry detail available nowhere else: the review was conducted independently by SixTillSix Ltd and MAKE Associates; the levy funds 72 hours of additional high-visibility policing every week; it had not been reviewed since introduction in 2016; and the adopted package includes appointing a Late-Night Manager/Coordinator, an annual report to Licensing Committee, monthly police updates to the LNL consultative group, and retention of the 70/30 split to the Met and the council. NOT ON THE PUBLIC RECORD, NEEDS A CALL OR AN FOI: how many LNR premises actually opted out by 31 August, and whether the promised letter to licence holders went out. LICENCE REVIEW IN THE BOROUGH: The Camden (Camden Town) - sub-committee imposed conditions rather than revoking, reported 18 Aug 2026, after Met representations alleging a 'culture of non-compliance' including two unreported violent incidents in one night. Conditions reported as electronic ID scanning after 8pm, CCTV upgrade with 31-day retention, more SIA door staff including female staff at peak hours, a digital incident log, and training for senior staff and the DPS within 30 days. Primary committee record not located; carried on local press. Direction unchanged - a review outcome is not a policy move. Direction remains MIXED (CIA removal loosening, levy extension tightening), unchanged since 27 Jul 2026."
+  },
+  {
+   "id": "tower-hamlets",
+   "name": "Tower Hamlets Council",
+   "region": "London",
+   "direction": "mixed",
+   "policy": "SoLP 2023–2028 in force (effective 1 Nov 2023). CIA 2024–2027 in force (20 Nov 2024 – 20 Nov 2027) as part of that policy: Brick Lane CIA retained and expanded SE; Bethnal Green CIA removed",
+   "cia_zones": [
+    "Brick Lane (expanded)"
+   ],
+   "live_consultation": {
+    "open": false
+   },
+   "next_review_due": "2027-11 (CIA) · 2028 (SoLP)",
+   "sources": [
+    "https://www.towerhamlets.gov.uk/lgnl/business/licences/alcohol_and_entertainment/alcohol_and_entertainment.aspx",
+    "https://democracy.towerhamlets.gov.uk/ieDecisionDetails.aspx?Id=7816",
+    "https://democracy.towerhamlets.gov.uk/mgIssueHistoryHome.aspx?IId=150969&PlanId=698&RPID=0",
+    "https://democracy.towerhamlets.gov.uk/mgConvert2PDF.aspx?ID=243494"
+   ],
+   "notes": "1 OCT 2026 - LINK CHECK (browser): primary source resolves and still matches the claimed policy. No new consultation, review or closure found this month. || LINK FIX 24 AUG 2026 — FIRST DEAD LINK SINCE 10 AUG. The consultation URL we carried as the primary source, talk.towerhamlets.gov.uk/cumulative-impact-policy-review-2024, now redirects to /en-GB/ and returns 'Page not found'. It is still indexed by search engines, which is exactly how a stale citation survives. Replaced with three sources that resolve: the council's own canonical Licensing Act 2003 page (Statement of Licensing Policy 2023–2028, effective 1 Nov 2023, with the CIA embedded), the Licensing Committee decision record 'Review of the Licensing Act Cumulative Impact Assessments' dated 16/10/2024, and the CIA Policy 2024–2027 document itself. Substance unchanged and re-verified: CIAs reviewed and approved at Full Council 20 Nov 2024, Bethnal Green CIA removed, Brick Lane CIA extended to its south-eastern edge, CIA runs 20 Nov 2024 – 20 Nov 2027. Also corrected: our entry previously recorded only the CIA and not the underlying SoLP 2023–2028. 3-year CIA cycle — next review consultation likely mid-2027. Tower Hamlets is one of seven London boroughs in the pilot now under the Mayor's duty-to-consult (live since 29 Jun 2026). LINK CHECK 1 SEP 2026 (monthly run): source URL re-surfaced by site-restricted search and re-fetched; page resolves and content matches this entry. Held. The three replacement sources added on 24 Aug after the talk.towerhamlets.gov.uk 404 all still resolve; SoLP 2023-2028 and the CIA 2024-2027 both confirmed present. CIA expires 20 Nov 2027."
+  },
+  {
+   "id": "islington",
+   "name": "Islington Council",
+   "region": "London",
+   "direction": "stable",
+   "policy": "SoLP 2023-2027 in force with six cumulative impact areas - Clerkenwell, Bunhill, Kings Cross, Angel and Upper Street, Holloway and Finsbury Park, and Archway; review due 2027",
+   "cia_zones": [
+    "Clerkenwell",
+    "Bunhill",
+    "Kings Cross",
+    "Angel and Upper Street",
+    "Holloway and Finsbury Park",
+    "Archway"
+   ],
+   "live_consultation": {
+    "open": false
+   },
+   "next_review_due": "2027",
+   "sources": [
+    "https://www.islington.gov.uk/business/licences-permits-registration/alcohol-and-entertainment-licences/islington-licensing-policy"
+   ],
+   "notes": "1 OCT 2026 - page resolves; Licensing Policy 2023-2027 and CIP Review still carry the null 'Jan 01, 0001' timestamp. No 2027 pre-consultation found. || 2027 SoLP renewal is a watch item — consultation likely late 2026/early 2027. 24 AUG 2026 (monthly run): the leaf URL that could not be re-surfaced last run has now been CONFIRMED LIVE by direct browser check. Page title 'Alcohol and entertainment licensing policy'; text states the Statement of Licensing Policy 'applies to all applications submitted from 1 January 2023 onwards'; 'Licensing Policy 2023-2027' and 'Cumulative Impact Policy Review' both offered as downloads; cumulative impact areas described with a link to the council's CIA map. No pre-consultation signal for the 2027 renewal. Minor data-quality note worth keeping: both PDFs on that page carry a 'Last updated Jan 01, 0001, 12:00AM' timestamp — the council's CMS is publishing a null date, so there is no way for a reader to tell when either document was last revised. Islington is one of seven London boroughs in the pilot now subject to the Mayor's statutory duty-to-consult on its SoLP, live since 29 Jun 2026 — directly relevant to a 2027 renewal. DATA ENRICHMENT 1 SEP 2026: the six cumulative impact areas are now named individually in this entry rather than recorded as 'six incl. Archway' - Clerkenwell, Bunhill, Kings Cross, Angel and Upper Street, Holloway and Finsbury Park, and Archway, per the Statement of Licensing Policy 2023-2027. Same pattern as the Leeds and Edinburgh corrections: we were carrying a count where the document gives a list. Page re-fetched 1 Sep and holds; the null CMS timestamps ('Last updated Jan 01, 0001, 12:00AM') are still on both PDFs. No pre-consultation signal for the 2027 renewal."
+  },
+  {
+   "id": "southwark",
+   "name": "Southwark Council",
+   "region": "London",
+   "direction": "tightening",
+   "policy": "SoLP 2026–2031 adopted (early 2026) with dedicated CIA chapter: Borough & Bankside CIA, Camberwell CIA; proposal to extend Late Night Levy to late-night refreshment premises (00:00–06:00)",
+   "cia_zones": [
+    "Borough & Bankside",
+    "Camberwell"
+   ],
+   "live_consultation": {
+    "open": false,
+    "subject": "SoLP consultation ran 19 Sep – 31 Oct 2025"
+   },
+   "sources": [
+    "https://www.southwark.gov.uk/sites/default/files/2026-04/Licensing-Act-2003-statement-of-licensing-policy-2026-to-2031.pdf",
+    "https://engage.southwark.gov.uk/projects/southwark-s-licensing-policy-2026-2031-consultation"
+   ],
+   "notes": "1 OCT 2026 - LINK CHECK (browser): primary source resolves and still matches the claimed policy. No new consultation, review or closure found this month. || 114 LNR premises in CIAs; levy extension worth ~£127k. Corsica Studios closure (Mar 2026) sits in this borough. LINK CHECK 24 AUG 2026 (monthly run, browser): the engagement-platform project page resolves — 'Southwark's Licensing Policy 2026-2031 consultation', consultation window 19 September 2025 to 31 October 2025, closed. Policy PDF path unchanged. Southwark is one of seven pilot London boroughs now under the Mayor's duty-to-consult (live 29 Jun 2026); the proposed late-night levy extension to LNR premises is the obvious candidate for GLA interest. LINK CHECK 1 SEP 2026 (monthly run): source URL re-surfaced by site-restricted search and re-fetched; page resolves and content matches this entry. Held."
+  },
+  {
+   "id": "lambeth",
+   "name": "Lambeth Council",
+   "region": "London",
+   "direction": "stable",
+   "policy": "SoLP 2024–2029 in force (30 Jan 2024 – 29 Jan 2029); cumulative impact policy covers part of Clapham High Street with rebuttable presumption of refusal",
+   "cia_zones": [
+    "Clapham High Street (part)"
+   ],
+   "live_consultation": {
+    "open": false
+   },
+   "sources": [
+    "https://www.lambeth.gov.uk/business-rates-services-licensing/licensing-permits/licensing-policy",
+    "https://www.lambeth.gov.uk/sites/default/files/2024-06/Licensing%20Policy%202024-29%20Lambeth.pdf"
+   ],
+   "notes": "1 OCT 2026 - LINK CHECK (browser): primary source resolves and still matches the claimed policy. No new consultation, review or closure found this month. || LINK CHECK 24 AUG 2026 (monthly run, browser): page resolves, heading 'Licensing policy', policy stated as running January 2024 to January 2029. Note the page now serves the PDF as 'statement-of-licensing-policy-2024-29.pdf' rather than the 2024-06 media path we hold as a secondary source; parent page is canonical and holds, secondary PDF path left in place pending a direct check. Clapham High Street CIP unchanged. Lambeth is one of seven pilot London boroughs now under the Mayor's duty-to-consult (live 29 Jun 2026). FLAG CLOSED 1 SEP 2026: the 2024-06 media path we hold as a secondary source (lambeth.gov.uk/sites/default/files/2024-06/Licensing%20Policy%202024-29%20Lambeth.pdf) re-surfaced and resolves, so the secondary source is live and needs no change. Policy confirmed as running 30 January 2024 to 29 January 2029, Clapham High Street CIP unchanged with its rebuttable presumption of refusal. Both links held."
+  },
+  {
+   "id": "manchester",
+   "name": "Manchester City Council",
+   "region": "North West",
+   "direction": "stable",
+   "policy": "SoLP 2024–2029 in force; NO cumulative impact assessment — flexible merits-based approach with 'late night economy' phase defined (00:00–04:00+)",
+   "cia_zones": [],
+   "live_consultation": {
+    "open": false
+   },
+   "sources": [
+    "https://www.manchester.gov.uk/licences-and-permissions/statement-of-licensing-policy2",
+    "https://www.manchester.gov.uk/__data/assets/file/0019/123265/statement_of_licensing_policy_-_2024_to_2029.pdf"
+   ],
+   "notes": "1 OCT 2026 - page resolves (SoLP 2024-2029). Reported: GMP-initiated review of Beilul Lounge, 100 Wilmslow Road (hygiene/management failings; GMP sought revocation) listed for the 1 Sep 2026 hearing panel after a transfer was refused on 27 Jul. OUTCOME NEEDS VERIFICATION - not counted. || Deliberately open stance — useful contrast case for the tracker. LINK CHECK 24 AUG 2026 (monthly run, browser): page resolves, heading 'Statement of Licensing policy', serving 'Statement of Licensing Policy - 2024 to 2029 (PDF, 7.14 MB)'. No CIA; stance unchanged. LINK CHECK 1 SEP 2026 (monthly run): source URL re-surfaced by site-restricted search and re-fetched; page resolves and content matches this entry. Held."
+  },
+  {
+   "id": "bristol",
+   "name": "Bristol City Council",
+   "region": "South West",
+   "direction": "stable",
+   "policy": "SoLP 2025–2030 effective 1 Aug 2025; CIA in effect from 8 Mar 2024 (city centre retained after 2023 near-removal; Bedminster/Southville CIA consulted separately)",
+   "cia_zones": [
+    "City centre",
+    "Bedminster & Southville (consulted)"
+   ],
+   "live_consultation": {
+    "open": true,
+    "opened": "2026-07-22",
+    "closes": "2026-10-14",
+    "subject": "Whether to RETAIN the city-centre Cumulative Impact Assessment (Cabot Sector incl. Welsh Back and Stokes Croft); current CIA expires 7 Mar 2027",
+    "url": "https://www.bristol.gov.uk/ask/find-consultation-engagement/consultation-engagement?id=302"
+   },
+   "next_review_due": "CIA expires 7 Mar 2027 - retention consultation OPEN to 14 Oct 2026",
+   "sources": [
+    "https://www.bristol.gov.uk/business/licences-and-permits/licensing-policy",
+    "https://www.bristol.gov.uk/files/documents/7394-cumulative-impact-assessment-2024-2027/file",
+    "https://www.bristol.gov.uk/ask/find-consultation-engagement/consultation-engagement?id=302",
+    "https://www.smartsurvey.co.uk/s/CIA2026/",
+    "https://bristol.citizenspace.com/licensing-regulatory-services/statement-of-licensing-policy/",
+    "https://democracy.bristol.gov.uk/ieListDocuments.aspx?CId=217",
+    "https://www.bristolpost.co.uk/whats-on/whats-on-news/popular-bristol-matchday-bar-el-11120945"
+   ],
+   "notes": "1 OCT 2026 - LIVE CONSULTATION, AND WE MISSED IT FOR TWO RUNS. Bristol opened a consultation on 22 JULY 2026 on whether to RETAIN the city-centre CIA (Cabot Sector incl. Welsh Back and Stokes Croft); it CLOSES MIDNIGHT WEDNESDAY 14 OCTOBER 2026. The council's own consultation page states the existing CIA expires 7 MARCH 2027 (we had carried 'Mar 2027'). It sat on the council's 'Ask Bristol' finder throughout August while we were checking the licensing-policy page, which - re-read 1 Oct in the browser - still does not mention it. Same failure mode as the Mayor's letter: we watched the page that ought to carry it, not the page that does. Survey: smartsurvey.co.uk/s/CIA2026. Direction stays STABLE: a consultation on retaining an existing CIA is not a move to restrict; if the council proposes extension or removal that changes. Note also the old 2020 citizenspace CIA consultation still surfaces in search and reads as live - it closed 28 Oct 2020. || EL RINCÓN DECIDED 20 AUG 2026. After a four-hour hearing the licensing sub-committee unanimously took NO ACTION beyond requiring CCTV inside and outside, plus a recommended sign identifying the venue as a home fans' bar. It REFUSED the police's requested conditions — alcohol only with a main meal (which would have ended vertical drinking at the premises) and a ban on serving drinks in glasses. Cllr Richard Eddy: it had not been proven that El Rincón contributed to unrest and disorder; unfair to make the licensee wholly responsible for matchday incidents in the area; 'We were not convinced by the police's case on vertical drinking so we are not going to impose a condition that bans that. It's a wonderful business.' Review ref 26/03363/PRREV, valid 18 Jun 2026, reps closed 16 Jul, hearing held seven days outside the 20-working-day window that expired 13 Aug. LINK FIX 24 AUG 2026 (monthly run): the policy URL we carried, bristol.gov.uk/licences-permits/licensing-policy, now 301s to bristol.gov.uk/business/licences-and-permits/licensing-policy — the council has restructured its business section. Not broken, but no longer canonical; source updated to the destination. Content re-verified on the new page: 'The last full policy review took place in 2025 and the policy came into effect on 1 August 2025', Cumulative Impact Assessment linked from the same page. CIA 2024–2027 (approved 29 Feb 2024, effective 8 Mar 2024) unchanged, city centre CIA in place. Direction stays STABLE — a review outcome is not a policy move, but note the outcome cuts the same way as the national row: a licensing committee declining, on the evidence, to regulate standing. LINK CHECK 1 SEP 2026 (monthly run): source URL re-surfaced by site-restricted search and re-fetched; page resolves and content matches this entry. Held. The restructured /business/ path is holding as canonical; CIA renewal remains due by Mar 2027."
+  },
+  {
+   "id": "birmingham",
+   "name": "Birmingham City Council",
+   "region": "West Midlands",
+   "direction": "loosening",
+   "policy": "Statement of Licensing Policy version 2.3, effective April 2025 — the July 2015 policy as reviewed Dec 2020 (which REMOVED all cumulative impact policy areas, incl. Broad Street, pending a full CIA), with administrative amendments Nov 2024, Mar 2025 and Apr 2025. Paragraph 14.3: 'There is no current cumulative impact assessment in effect.' No CIA anywhere in the city",
+   "cia_zones": [],
+   "live_consultation": {
+    "open": false
+   },
+   "sources": [
+    "https://www.birmingham.gov.uk/download/downloads/id/831/licensing_act_2003_-_statement_of_licensing_policy.pdf",
+    "https://www.birmingham.gov.uk/info/20081/licensing/296/statement_of_licensing_policy",
+    "https://www.popall.co.uk/news-publications/news/midlands-council-removes-cumulative-impact-policies-under-new-interim-licensing-policy"
+   ],
+   "notes": "1 OCT 2026 - FIVE MONTHS past the reported 1 May 2026 SoLP; landing page still says 'came into effect in July 2015'. No new trace. Offline check (phone/FOI) still required. || VERIFICATION FLAG CLOSED 24 AUG 2026 — by reading the policy document rather than the landing page. The canonical download (birmingham.gov.uk/download/downloads/id/831/) is the Licensing Act 2003 Statement of Licensing Policy, version control table showing v1.0 July 2015 (full review), v1.1 Jan 2017 (additional cumulative impact areas), v2.0 Dec 2020 ('Removal of CIP areas pending full CIA'), v2.1 Nov 2024, v2.2 Mar 2025, v2.3 Apr 2025 (all administrative). Section 14 para 14.3 states: 'There is no current cumulative impact assessment in effect.' Para 14.4 preserves the right to make cumulative-impact representations even without a CIA. DIRECTION CHANGED stable → loosening: no CIA and no presumption of refusal anywhere in England's largest local authority, and none since Dec 2020 — that is a loosening posture, and it belongs on the map as one. STILL UNVERIFIED: the CMIS committee papers surfaced on 10 Aug 2026 indicating a new SoLP for implementation 1 May 2026 — the canonical download remains v2.3 (April 2025), so either it was not adopted or the council has not published it. CMIS document URLs exceed fetch limits; a manual check would close this final gap. 24 AUG 2026 (monthly run, browser check as directed): the council's SoLP landing page was pulled in full and STILL reads 'The current Statement of Licensing Policy came into effect in July 2015' — i.e. the landing page contradicts the document it links to (v2.3, April 2025) and shows no trace of a 1 May 2026 policy. Nearly four months past that reported implementation date, nothing has been published. Flag stays open; this now needs a phone call or an FOI rather than another fetch. 1 SEP 2026: landing page fetched again and it is unchanged - 'The current Statement of Licensing Policy came into effect in July 2015' - while the document it links is the 2025 statement. The page and its own attachment still contradict each other on the same screen. FOUR MONTHS past the reported 1 May 2026 implementation date and there is still no trace of that statement anywhere online; the canonical download is still the version we verified. This flag has exhausted what the internet will give it and needs a phone call or an FOI to Birmingham licensing. Direction stays loosening. Links hold."
+  },
+  {
+   "id": "leeds",
+   "name": "Leeds City Council",
+   "region": "Yorkshire",
+   "direction": "tightening",
+   "policy": "Statement of Licensing Policy 2023–2027 in force (approved 18 Jan 2023, amended Jan 2025 to add Beeston). Cumulative Impact Assessment 2026–2028 approved by Licensing Committee Jan 2026; the SoLP names six cumulative impact areas",
+   "cia_zones": [
+    "City centre",
+    "Headingley (North Lane / Otley Road)",
+    "Hyde Park",
+    "Armley (Town Street / Branch Road, off-sales)",
+    "Harehills and Burmantofts (off-sales / LNR)",
+    "Beeston (added Jan 2025, off-sales / LNR)"
+   ],
+   "live_consultation": {
+    "open": false
+   },
+   "next_review_due": "2027 (SoLP) · 2028 (CIA)",
+   "sources": [
+    "https://www.leeds.gov.uk/licensing/licensing-policies",
+    "https://www.leeds.gov.uk/licensing/statement-of-licensing-policy"
+   ],
+   "notes": "1 OCT 2026 - LINK CHECK (browser): primary source resolves and still matches the claimed policy. No new consultation, review or closure found this month. || DATA CORRECTION 17 AUG 2026 from the link check: the council's SoLP page is titled 'Statement of Licensing Policy 2023 – 2027' and Section 7 names SIX cumulative impact areas — city centre, Headingley, Hyde Park, Armley, Harehills & Burmantofts, and Beeston. Our previous entry listed only three. The CIA 2026–2028 approval by Licensing Committee in Jan 2026 is separately confirmed via democracy.leeds.gov.uk, and the SoLP records a statutory 3-yearly CIA review cycle (para 7.13). Full 232-page CIA still only available by email request (entertainment.licensing@leeds.gov.uk) — a standing example of how scattered this data is. NOTE: /licensing/licensing-policies is the index page covering BOTH the Licensing Act SoLP and the Gambling Act statement of principles; the Licensing Act policy lives at /licensing/statement-of-licensing-policy. LINK CHECK 24 AUG 2026 (monthly run, browser): page resolves, heading confirmed as 'Statement of Licensing Policy 2023 - 2027' under 'Licensing Act 2003'. Six CIAs and the CIA 2026-2028 approval unchanged. LINK CHECK 1 SEP 2026 (monthly run): source URL re-surfaced by site-restricted search and re-fetched; page resolves and content matches this entry. Held."
+  },
+  {
+   "id": "newcastle",
+   "name": "Newcastle City Council",
+   "region": "North East",
+   "direction": "mixed",
+   "policy": "SoLP 2023-2028 in force (from 1 Nov 2023); the 2023 review introduced 5 new cumulative impact policy areas for off-licences and late-night refreshment. SEPARATELY, the city's LATE NIGHT LEVY IS PROPOSED FOR ABOLITION: Licensing Committee agreed on 24 Aug 2026 to recommend revocation with a proposed end date of 31 Oct 2026; statutory consultation CLOSED 22 Sep 2026; Full Council decision reported for 7 Oct 2026",
+   "cia_zones": [
+    "5 CIP areas (off-sales / LNR focused)"
+   ],
+   "live_consultation": {
+    "open": false,
+    "closed": "2026-09-22",
+    "subject": "Statutory consultation on REVOKING the Late Night Levy - closed; Full Council decision pending (reported 7 Oct), proposed end date 31 Oct 2026",
+    "url": "https://www.letstalknewcastle.co.uk/consultations/629/participate"
+   },
+   "next_review_due": "2028 (SoLP) · 7 Oct 2026 (Late Night Levy decision)",
+   "sources": [
+    "https://www.newcastle.gov.uk/services/licences-and-permits/licensing-act-2003-pages/licensing-act-2003-statement-licensing",
+    "https://new.newcastle.gov.uk/news/2026/council-leader-calls-end-newcastles-late-night-levy",
+    "https://www.letstalknewcastle.co.uk/consultations/629/participate",
+    "https://www.newcastle.gov.uk/services/licences-and-permits/late-night-levy",
+    "https://www.popall.co.uk/news-publications/news/newcastle-proposes-to-abolish-the-late-night-levy",
+    "https://www.john-gaunt.co.uk/news/newcastle-s-late-night-levy-to-be-axed"
+   ],
+   "notes": "1 OCT 2026 - CONSULTATION CLOSED 22 SEP, DECISION PENDING. Let's Talk Newcastle now reads 'This consultation has now ended'; decision 'will be published later this year'. Full Council date of 7 Oct carried from last run's sources - not re-confirmed against a published agenda this run (NEEDS VERIFICATION). Direction stays MIXED pending the vote; revert to stable if refused. The council's own Late Night Levy page, re-read 1 Oct in the browser, STILL advertises the independent-review consultation 'by 17 July 2026' and still says nothing about the revocation proposal, the closed statutory consultation or the 31 Oct end date - eleven weeks stale. || DIRECTION CHANGE 1 SEP 2026: stable -> MIXED, and it is the first movement on the board since Birmingham on 24 August. Newcastle City Council's Licensing Committee met on 24 AUGUST 2026 - hours after our last run published - and agreed to recommend that the Late Night Levy be REVOKED, proposed end date 31 October 2026. The review report to that committee recorded 93% of respondents supporting abolition. A statutory consultation on revocation is live and CLOSES 22 SEPTEMBER 2026; Full Council decides 7 October. Levy facts from the council's own 19 Aug release: in place since 2013, managed with the Northumbria Police and Crime Commissioner; 281 premises; GBP 299 to GBP 4,400 a year; GBP 3.46m raised since 2013, of which GBP 2.26m to the PCC and GBP 968,432 to the council; funds street cleansing, CCTV, Street Marshals, Taxi Marshals, the Safe Haven van on Bigg Market and extra police patrols. Leader Cllr Colin Ferguson (new Liberal Democrat administration): 'this Cabinet does not think it is fair that Newcastle is one of just two cities outside of London that expects hospitality venues to contribute towards policing and public safety initiatives.' Replacement proposed: a new governance structure funded by the council and the NE1 Business Improvement District. WHY MIXED AND NOT LOOSENING: the five cumulative impact policy areas introduced by the 2023 SoLP review remain in force and unchanged - a tightening posture - while a live consultation proposes removing a financial burden on the late-night trade. Our own status key counts a live consultation likely to restrict as tightening, so a live consultation likely to relax is treated the same way in reverse. That is the same reasoning applied to Camden on 27 July, in the opposite direction. This is a proposal, not an adopted change: if Full Council refuses on 7 October, Newcastle reverts to stable. AGGREGATION GAP, AND A GOOD ONE: the council's own Late Night Levy page (fetched in full 1 Sep) carries none of it. It still advertises the EARLIER independent-review consultation under the heading 'Late Night Levy consultation' with 'To take part - by 17 July 2026', six weeks after that closed, and the hyperlink offered to take part points back to the same page - a self-referential loop. No mention of the 24 August decision, the 22 September statutory consultation, or the proposed 31 October end date. A Newcastle licensee wanting to comment on whether their own levy is abolished cannot get there from the council's levy page. SoLP page itself re-checked and unchanged: 'Licensing Act 2003 - Statement of Licensing Policy', SoLP 2023-2028. CROSS-REFERENCE: the council's release states Newcastle and LIVERPOOL are the only cities outside London charging a levy. Both are pilot authorities. If Newcastle revokes on 7 October, Liverpool becomes the last one standing."
+  },
+  {
+   "id": "liverpool",
+   "name": "Liverpool City Council",
+   "region": "North West",
+   "direction": "loosening",
+   "policy": "All cumulative impact policy areas REMOVED at 2021 policy review; SoLP approved 20 Jan 2021 — 5-year renewal is now due/overdue (2026)",
+   "cia_zones": [],
+   "live_consultation": {
+    "open": false
+   },
+   "next_review_due": "2026 (SoLP renewal OVERDUE - ten months past the five-year mark)",
+   "sources": [
+    "https://liverpool.gov.uk/business/licences-and-permits/entertainment-and-alcohol-licences/premises-licence/new-applications/",
+    "https://liverpool.gov.uk/media/i1hbngos/licensing-policy-statement-21-26.pdf",
+    "https://www.popall.co.uk/news-publications/news/liverpool-city-council-becomes-latest-authority-to-remove-their-cumulative-impact-policy-areas"
+   ],
+   "notes": "1 OCT 2026 - TEN MONTHS. Browser check: new-applications page still serves 'Licensing Policy Statement 2021-26'. No Licensing Act renewal consultation found. Late Night Levy page unchanged (70% of net to Merseyside PCC; 2021/22 is the latest published statement of net levy). If Newcastle revokes, Liverpool is the only city outside London still charging a levy. || SoLP renewal consultation should have surfaced in 2026 — highest-priority standing watch item. LINK CHECK 24 AUG 2026: the premises-licence new-applications page remains the canonical home of the Licensing Policy Statement 2021–26 PDF (479 KB, approved by full council 20 Jan 2021); parent path confirmed live via the council's entertainment-and-alcohol-licences index, the leaf URL itself not re-surfaced in this run's search index (unchanged-risk low). STILL the 2021 policy; no Licensing Act renewal consultation live as of 24 Aug — EIGHT months past the five-year mark. Beware the SELECTIVE (landlord) licensing consultation, which IS live (27 Jul – 5 Oct 2026): different regime, not the SoLP, and deliberately excluded from the open-consultations counter. 24 AUG 2026 (monthly run): the leaf URL is now CONFIRMED LIVE by direct browser check rather than inferred — the new-applications page serves 'licensing-policy-statement-21-26.pdf' under a 'First published: 20/01/2021' stamp. Still the 2021 policy. Still no renewal consultation. Eight months. 1 SEP 2026: still the January 2021 policy. No Licensing Act renewal consultation live - NINE MONTHS past the five-year mark, and it will be ten by the October run. The selective (landlord) licensing consultation is still live to 5 Oct and is still a different regime, still excluded from the open-consultations counter. NEW CROSS-REFERENCE WORTH WATCHING: Newcastle City Council's own 19 Aug 2026 release states that Newcastle and Liverpool are the ONLY TWO CITIES OUTSIDE LONDON still charging a Late Night Levy. Newcastle's Full Council votes on revoking its levy on 7 October. If it goes, Liverpool is the last city outside London with one - a council that has removed every cumulative impact policy area but kept the levy. That is a story and a question for Liverpool licensing. Link holds."
+  },
+  {
+   "id": "brighton-hove",
+   "name": "Brighton & Hove City Council",
+   "region": "South East",
+   "direction": "mixed",
+   "policy": "SoLP 2026 adopted 18 Dec 2025, effective 5 Jan 2026: CIZ scrapped and replaced with City Safety Area (same boundary, no blanket presumption of refusal, matrix-based scrutiny); Special Stress Area retained; new 'good operator' policy",
+   "cia_zones": [
+    "City Safety Area (ex-CIZ)",
+    "Special Stress Area"
+   ],
+   "live_consultation": {
+    "open": false
+   },
+   "sources": [
+    "https://www.brighton-hove.gov.uk/business-and-trade/licensing-and-gambling/statement-licensing-policy-2026",
+    "https://www.localgovernmentlawyer.co.uk/licensing/399-licensing-news/99461-city-council-ditches-cumulative-impact-zone-for-city-safe-area-in-new-licensing-approach-introduces-good-operator-policy"
+   ],
+   "notes": "1 OCT 2026 - LINK CHECK (browser): primary source resolves and still matches the claimed policy. No new consultation, review or closure found this month. || First council to rebrand CIZ as a safety-first framework — a structural story, not just a boundary change. LINK CHECK 24 AUG 2026 (monthly run, browser): page resolves, heading 'Statement of Licensing Policy 2026', text confirms the Cumulative Impact Zone has been replaced with a City Safety Area plus adjacent area, effective 5 January 2026. Unchanged. LINK CHECK 1 SEP 2026 (monthly run): source URL re-surfaced by site-restricted search and re-fetched; page resolves and content matches this entry. Held."
+  },
+  {
+   "id": "glasgow",
+   "name": "City of Glasgow Licensing Board",
+   "region": "Scotland",
+   "direction": "stable",
+   "regime": "Licensing (Scotland) Act 2005 — overprovision, not CIP",
+   "policy": "Licensing Policy Statement 2023–2028 in force with proactive overprovision assessment; overprovision areas mapped on council site",
+   "cia_zones": [
+    "Overprovision areas (see policy statement)"
+   ],
+   "live_consultation": {
+    "open": false
+   },
+   "next_review_due": "2028",
+   "sources": [
+    "https://www.glasgow.gov.uk/article/8074/Licensing-Policy-Statement",
+    "https://ntia.co.uk/new-night-time-economy-commission-sets-out-vision-for-glasgow/",
+    "https://dramscotland.co.uk/2026/09/18/glasgow-reviews-city-centre-pub-opening-hours-and-overprovision-rules/"
+   ],
+   "notes": "1 OCT 2026 - REVIEW SIGNAL, NO POLICY CHANGE. Glasgow's Local Licensing Forum set up a sub-group to examine the Board's city-centre on-sales hours (incl. the 2023 1am pilot) and its approach to OVERPROVISION; its report went to the Forum on 8 Sep 2026 (DRAM Scotland, 18 Sep). The Forum advises; the Board sets policy. Direction stays stable. Licensing (Scotland) Act 2005 overprovision - not a CIP. LINK CHECK 1 OCT: page resolves in browser, policy statement linked. || 13 Jul 2026: Glasgow Night Time Economy Commission launched (chair Mike Grieve, Sub Club / SNTIA), backed by a new council-funded NTE Manager post — a first for Scotland — and £100k in the 2026–27 budget for the Night Time Action Plan. Overprovision policy itself unchanged; direction stays stable. LINK CHECK 24 AUG 2026 (monthly run, browser): page resolves, heading 'Licensing Policy Statement', five-yearly publication duty and the overprovision map both present. Overprovision policy unchanged — this is the Licensing (Scotland) Act 2005 regime and must never be described as a CIP. LINK CHECK 1 SEP 2026 (monthly run): source URL re-surfaced by site-restricted search and re-fetched; page resolves and content matches this entry. Held. Overprovision under the Licensing (Scotland) Act 2005 - never to be described as a CIP."
+  },
+  {
+   "id": "edinburgh",
+   "name": "City of Edinburgh Licensing Board",
+   "region": "Scotland",
+   "direction": "loosening",
+   "regime": "Licensing (Scotland) Act 2005 — overprovision, not CIP",
+   "policy": "Overprovision policy SCRAPPED by 5–3 board vote, 23 Jun 2025 (supplementary statement of licensing policy adopted after statutory consultation); former overprovision localities: Old Town, Princes Street, Leith Street, Tollcross, Dean Village, Southside, Canongate, Dumbiedykes",
+   "cia_zones": [],
+   "live_consultation": {
+    "open": false
+   },
+   "sources": [
+    "https://www.edinburgh.gov.uk/licences-permits/edinburghs-licensing-board",
+    "https://www.edinburgh.gov.uk/downloads/download/16084/overprovision-licensing-policy-2025",
+    "https://www.lawscot.org.uk/members/journal-hub/articles/overprovision-no-more-all-change-in-edinburghs-licensed-trade-landscape/",
+    "https://instituteoflicensing.org/network-news/edinburgh-licensing-board-scraps-overprovision-policy-in-split-vote/",
+    "https://dramscotland.co.uk/2025/08/12/edinburgh-licensing-board-ends-over-provision-policy/"
+   ],
+   "notes": "1 OCT 2026 - LINK CHECK (browser): primary source resolves and still matches the claimed policy. No new consultation, review or closure found this month. || DATA CORRECTION 24 AUG 2026 from the link check: the scrapped overprovision policy covered EIGHT named localities — Old Town, Princes Street, Leith Street, Tollcross, Dean Village, Southside, Canongate and Dumbiedykes — not the four previously listed here. Confirmed via the Law Society of Scotland's Journal analysis and the Board's own 'Overprovision (licensing policy 2025)' download. The 23 Jun 2025 decision took the form of a supplementary statement of licensing policy adopted after statutory consultation; all applications are now assessed on an evidence-driven approach against the five licensing objectives. Police Scotland, NHS Lothian and Alcohol Focus Scotland gave evidence against removal — contested decision, follow-up story potential. Board page link holds. LINK CHECK 24 AUG 2026 (monthly run, browser): board page resolves, carrying both a 'Statement of Licensing Policy 2023' section and a distinct 'Overprovision' section. Unchanged since the 23 Jun 2025 vote — Scots regime, not a CIP. LINK CHECK 1 SEP 2026 (monthly run): source URL re-surfaced by site-restricted search and re-fetched; page resolves and content matches this entry. Held."
+  }
+ ]
 }
