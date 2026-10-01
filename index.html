@@ -248,7 +248,7 @@
         <div class="legend-row"><span class="legend-dot stable"></span><span class="legend-text"><b>Stable</b><span>Policy in force, no active change</span></span></div>
         <div class="legend-row"><span class="legend-dot loosening"></span><span class="legend-text"><b>Loosening</b><span>CIA or overprovision removed, presumption dropped</span></span></div>
         <div class="legend-row"><span class="legend-dot mixed"></span><span class="legend-text"><b>Mixed</b><span>Tightening and loosening moves at once</span></span></div>
-        <p class="map-note">Pilot split: 4 tightening · 7 stable · 3 loosening · 2 mixed. Roughly as many authorities are opening up as closing in — the national picture is messier than the headlines.</p>
+        <p class="map-note">Pilot split: 3 tightening · 5 stable · 3 loosening · 5 mixed. As many authorities are opening up as closing in — the national picture is messier than the headlines.</p>
       </div>
     </div>
   </section>
@@ -300,73 +300,75 @@
 <script>
 /* ══════════════════════════════════════════════════════════════
    DATA — generated from data/councils.json + data/notices.json
-   Regenerate this block from those files on each weekly update.
-   Dataset date: 2026-07-27
+   Regenerate this block from those files on each monthly update (1st of the month).
+   Dataset date: 2026-10-01
    ══════════════════════════════════════════════════════════════ */
-const DATA_DATE = "27 July 2026";
+const DATA_DATE = "1 October 2026";
 
 const COUNTERS = [
   {num:16, cls:"",      label:"Authorities tracked",         href:"#authorities"},
-  {num:2,  cls:"stamp", label:"Open consultations",          href:"https://www.gov.uk/government/consultations/premises-closure-orders", ext:true, title:"Home Office closure orders consultation closes 11.59pm Fri 31 Jul; Westminster SoLP 2026 closes 9 Aug"},
+  {num:1,  cls:"stamp", label:"Open consultations",          href:"https://www.bristol.gov.uk/ask/find-consultation-engagement/consultation-engagement?id=302", ext:true, title:"Bristol's consultation on whether to keep its city-centre cumulative impact zone — closes midnight Wednesday 14 October 2026. It isn't linked from the council's licensing-policy page; click through to the consultation"},
   {num:1,  cls:"",      label:"Licence reviews this month",  href:"#board"},
   {num:0,  cls:"pulse", label:"Closures this quarter",       href:"#board"}
 ];
 
 const NOTICES = [
-  {act:"ASB, Crime & Policing Act 2014", borough:"Home Office", stamp:["open","Final week — closes 31 Jul"],
-   body:"National consultation on longer premises closure orders: Home Office seeks views on raising the maximum duration and extension limits of closure orders used against venues. Responses close 11.59pm Friday.",
-   date:"Closes 31 Jul 2026",
-   url:"https://www.gov.uk/government/consultations/premises-closure-orders"},
-  {act:"Licensing Act 2003", borough:"Bristol", stamp:["review","Hearing by 13 Aug"],
-   body:"El Rincón review (police-requested): representations closed 16 July; hearing must be held within 20 working days — by 13 August. Date not yet listed.",
-   date:"Hearing due by 13 Aug 2026",
-   url:"https://www.bristol247.com/food-and-drink/news-food-and-drink/bar-owner-asks-customers-support-police-request-licence-review/"},
-  {act:"Licensing Act 2003", borough:"Westminster", stamp:["open","Consultation open"],
-   body:"SoLP 2026 consultation live: West End CIZ trimmed, Edgware Rd & Queensway CIZs dropped, new Special Consideration Zones ring the core.",
-   date:"Closes 9 Aug 2026",
+  {act:"Licensing Act 2003", borough:"Bristol", stamp:["open","OPEN — 13 DAYS, closes 14 Oct"],
+   body:"Bristol is consulting on whether to keep its city-centre cumulative impact zone — the Cabot Sector, Welsh Back and Stokes Croft. The current CIA expires on 7 March 2027 and the council must consult before deciding. It opened on 22 July and closes at midnight on Wednesday 14 October. It isn't on the council's licensing-policy page, which is how we missed it for two months.",
+   date:"Closes 14 Oct 2026",
+   url:"https://www.bristol.gov.uk/ask/find-consultation-engagement/consultation-engagement?id=302"},
+  {act:"Late Night Levy", borough:"Newcastle", stamp:["review","Decision pending — Full Council"],
+   body:"The consultation on scrapping Newcastle's Late Night Levy closed on 22 September. Full Council decides next, reported for 7 October, with a proposed end date of 31 October. The levy covers 281 premises at £299–£4,400 a year and has raised £3.46m since 2013. If it goes, Liverpool is the last city outside London still charging one. The council's levy page still advertises a consultation that closed on 17 July.",
+   date:"Decision due Oct 2026",
+   url:"https://www.letstalknewcastle.co.uk/consultations/629/participate"},
+  {act:"Licensing Act 2003", borough:"Westminster", stamp:["closed","IN FORCE TODAY — 1 Oct"],
+   body:"Adopted by Full Council on 16 September, in force today. The West End cumulative impact zone stays, but smaller — substantial parts of Covent Garden, Mayfair and north of Oxford Street come out. Core hours become benchmarks, not caps. The vertical-drinking definition survives. 690 consultation responses, against 170 last time. The council has promised to revisit the CIZ and core-hours evidence within 12–18 months.",
+   date:"In force 1 Oct 2026",
    url:"https://www.westminster.gov.uk/licensing/licensing-policy-and-strategy/statement-licensing-policy"},
-  {act:"Late Night Levy", borough:"Camden", stamp:["open","Opt out by 31 Aug"],
-   body:"Camden's Late Night Levy now reaches late-night refreshment premises (00:00–05:00). Free opt-out via minor variation until 31 August — after that, you're paying pro rata.",
-   date:"Confirmed 24 Jul 2026",
-   url:"https://www.popall.co.uk/news-publications/news/camden-to-allow-late-night-refreshment-premises-the-opportunity-to-opt-out-of-the-late-night-levy"},
-  {act:"Licensing Act 2003", borough:"Westminster", stamp:["review","Disputed"],
-   body:"NTIA brands the CIA consultation potentially unlawful — claims the licensed trade wasn't properly told it was happening.",
-   date:"Reported Apr 2026",
-   url:"https://www.thespiritsbusiness.com/2026/04/westminster-licensing-consultation-branded-unlawful/"},
-  {act:"High Court", borough:"Newham", stamp:["closed","Revocation upheld"],
-   body:"High Court rejects Pier One Club's appeal. Licence revoked over women's safety failures; any return needs a new operator.",
-   date:"Judgment 30 Jun 2026",
-   url:"https://www.localgovernmentlawyer.co.uk/licensing/399-licensing-news/59397-high-court-rejects-appeal-by-nightclub-operator-over-revocation-of-licence"}
+  {act:"Devolution Act 2026", borough:"Greater London", stamp:["review","Mayor asked — council said no"],
+   body:"The first test of the Mayor's new statutory role has an answer. He asked Westminster to drop the West End cumulative impact policy entirely; it shrank it instead. Sir Sadiq Khan: 'They would rather see nightlife die than thrive.' Cllr Tim Barnes asked City Hall to fund Met licensing officers, night buses and a Thursday Night Tube. The duty is to consult the Mayor, not to obey him. The call-in power that would change that still has no secondary legislation.",
+   date:"9–16 Sep 2026",
+   url:"https://www.morningadvertiser.co.uk/Article/2026/09/09/westminster-keeps-vertical-drinking-policy-despite-backlash/"},
+  {act:"Licensing Act 2003", borough:"Westminster", stamp:["review","Conditions, licence kept"],
+   body:"The Mistress of Mayfair keeps its licence after a full review over an alleged throat-slashing on 10 August. The Met said it had been trading like a nightclub and the suspect's ID wasn't scanned despite a licence condition. New conditions: no dancefloor, an earlier finish to Sunday alcohol sales, identifiable door staff. The general manager has been replaced.",
+   date:"Decided Sep 2026",
+   url:"https://www.thedrinksbusiness.com/2026/09/mayfair-restaurant-allowed-to-remain-open-after-alleged-throat-slashing-attack/"},
+  {act:"Licensing Act 2003", borough:"Westminster", stamp:["open","2am granted — inside the CIZ"],
+   body:"A week before adopting its new policy, Westminster let Trisha's — the New Evaristo Club on Greek Street — stay open until 2am instead of 1am, over a formal Met objection that the street sits in the cumulative impact zone. The second CIZ exception of the summer after McDonald's Leicester Square.",
+   date:"8 Sep 2026",
+   url:"https://londoncrimenews.co.uk/courts/soho-club-trishas-wins-later-hours-despite-police-objections"}
 ];
 
 const AUTHORITIES = [
-  {name:"Westminster", dir:"tightening", detail:"SoLP 2026 consultation open — West End CIZ kept (trimmed), Edgware Rd & Queensway CIZs dropped, new Special Consideration Zones.", meta:"Consultation closes 9 Aug 2026", url:"https://www.westminster.gov.uk/licensing/licensing-policy-and-strategy/statement-licensing-policy"},
-  {name:"Hackney", dir:"tightening", detail:"Shoreditch CIA in force since 1 Apr 2025; Dalston is a Special Consideration Area. Not yet shown on the council's policy page.", meta:"SoLP to Aug 2028", url:"https://www.hackney.gov.uk/business-and-licensing/licensing/licensing-policy-alcohol-entertainment-and-late-night-refreshment"},
-  {name:"Camden", dir:"mixed", detail:"CIAs removed, but the Late Night Levy now extends to late-night refreshment premises — free opt-out closes 31 Aug 2026.", meta:"SoLP 2025–2030 · levy reformed", url:"https://www.camden.gov.uk/licensing-policy"},
-  {name:"Tower Hamlets", dir:"mixed", detail:"Brick Lane CIA retained & expanded SE; Bethnal Green CIA removed.", meta:"CIA to Nov 2027", url:"https://talk.towerhamlets.gov.uk/cumulative-impact-policy-review-2024"},
-  {name:"Islington", dir:"stable", detail:"Six CIAs in force incl. Archway. SoLP expires 2027 — renewal consultation likely late 2026.", meta:"SoLP 2023–2027 · WATCH", url:"https://www.islington.gov.uk/business/licences-permits-registration/alcohol-and-entertainment-licences/islington-licensing-policy"},
+  {name:"Westminster", dir:"mixed", detail:"New Statement of Licensing Policy adopted 16 Sep, in force 1 Oct 2026. West End CIZ kept but shrunk on its western, eastern and northern edges; core hours now benchmarks, not caps; the vertical-drinking definition stays. The Mayor asked for the CIZ to go entirely — it didn't. CIZ and core-hours evidence review promised within 12–18 months.", meta:"SoLP Oct 2026 · in force today", url:"https://www.westminster.gov.uk/licensing/licensing-policy-and-strategy/statement-licensing-policy"},
+  {name:"Hackney", dir:"tightening", detail:"Shoreditch CIA in force since 1 Apr 2025; Dalston is a Special Consideration Area. Nineteen months on, neither appears on the council's policy page — though the policy document itself names both.", meta:"SoLP to Aug 2028 · 19-month gap", url:"https://www.hackney.gov.uk/business-and-licensing/licensing/licensing-policy-alcohol-entertainment-and-late-night-refreshment"},
+  {name:"Camden", dir:"mixed", detail:"CIAs removed, but the Late Night Levy now reaches late-night refreshment premises. The free opt-out closed 31 Aug 2026; the council's levy page still doesn't mention it, and take-up has never been published.", meta:"SoLP 2025–2030 · levy extended to LNR", url:"https://www.camden.gov.uk/licensing-policy"},
+  {name:"Tower Hamlets", dir:"mixed", detail:"Brick Lane CIA retained & expanded SE; Bethnal Green CIA removed. CIA runs to Nov 2027.", meta:"SoLP 2023–2028 · CIA to Nov 2027", url:"https://www.towerhamlets.gov.uk/lgnl/business/licences/alcohol_and_entertainment/alcohol_and_entertainment.aspx"},
+  {name:"Islington", dir:"stable", detail:"Six CIAs in force — Clerkenwell, Bunhill, Kings Cross, Angel &amp; Upper Street, Holloway &amp; Finsbury Park, Archway. SoLP expires 2027; renewal consultation likely late 2026.", meta:"SoLP 2023–2027 · WATCH", url:"https://www.islington.gov.uk/business/licences-permits-registration/alcohol-and-entertainment-licences/islington-licensing-policy"},
   {name:"Southwark", dir:"tightening", detail:"SoLP 2026–31 adopted: Borough & Bankside + Camberwell CIAs kept; late-night levy extension proposed.", meta:"SoLP 2026–2031", url:"https://www.southwark.gov.uk/sites/default/files/2026-04/Licensing-Act-2003-statement-of-licensing-policy-2026-to-2031.pdf"},
   {name:"Lambeth", dir:"stable", detail:"Clapham High Street CIP in force with rebuttable presumption of refusal.", meta:"SoLP 2024–2029", url:"https://www.lambeth.gov.uk/business-rates-services-licensing/licensing-permits/licensing-policy"},
   {name:"Manchester", dir:"stable", detail:"No CIA — deliberately flexible, merits-based policy with defined late-night phase.", meta:"SoLP 2024–2029", url:"https://www.manchester.gov.uk/licences-and-permissions/statement-of-licensing-policy2"},
-  {name:"Bristol", dir:"stable", detail:"City-centre CIA in effect since Mar 2024; El Rincón review — reps closed 16 Jul, hearing due by 13 Aug.", meta:"SoLP 2025–2030 · CIA renews 2027", url:"https://www.bristol.gov.uk/licences-permits/licensing-policy"},
-  {name:"Birmingham", dir:"stable", detail:"Policy status unverified — council page still lists the 2015 SoLP; CIPs removed under the 2020 interim policy.", meta:"NEEDS VERIFICATION", url:"https://www.birmingham.gov.uk/info/20081/licensing/296/statement_of_licensing_policy"},
-  {name:"Leeds", dir:"tightening", detail:"CIA 2026–28 approved after Beeston addition and Headingley Lane expansion.", meta:"CIA 2026–2028", url:"https://www.leeds.gov.uk/licensing/licensing-policies"},
-  {name:"Newcastle", dir:"stable", detail:"Five CIP areas (off-sales / late-night refreshment) in force since Nov 2023.", meta:"SoLP 2023–2028", url:"https://www.newcastle.gov.uk/services/licences-and-permits/licensing-act-2003-pages/licensing-act-2003-statement-licensing"},
-  {name:"Liverpool", dir:"loosening", detail:"All CIPs removed in 2021. SoLP renewal now due — no consultation live as of 27 Jul.", meta:"SoLP renewal due 2026 · WATCH", url:"https://liverpool.gov.uk/council/strategies-plans-and-policies/licensing/licensing-policy-statement"},
+  {name:"Bristol", dir:"stable", detail:"City-centre CIA in effect since Mar 2024 and expiring 7 Mar 2027. Consultation on whether to KEEP it open since 22 July, closes 14 Oct 2026 — not mentioned on the council's own licensing-policy page.", meta:"CIA consultation OPEN · closes 14 Oct", url:"https://www.bristol.gov.uk/ask/find-consultation-engagement/consultation-engagement?id=302"},
+  {name:"Birmingham", dir:"loosening", detail:"Verified from the policy document (v2.3, Apr 2025): 'There is no current cumulative impact assessment in effect.' No presumption of refusal anywhere in the city since Dec 2020. The landing page still says the policy 'came into effect in July 2015'.", meta:"SoLP v2.3 · no CIA since 2020", url:"https://www.birmingham.gov.uk/download/downloads/id/831/licensing_act_2003_-_statement_of_licensing_policy.pdf"},
+  {name:"Leeds", dir:"tightening", detail:"Six cumulative impact areas in the SoLP — city centre, Headingley, Hyde Park, Armley, Harehills & Burmantofts, Beeston. CIA 2026–28 approved Jan 2026.", meta:"SoLP 2023–2027 · CIA 2026–2028", url:"https://www.leeds.gov.uk/licensing/statement-of-licensing-policy"},
+  {name:"Newcastle", dir:"mixed", detail:"Five CIP areas (off-sales / late-night refreshment) still in force since Nov 2023 — while the Late Night Levy faces abolition. Revocation consultation closed 22 Sept; Full Council decision pending (reported 7 Oct); proposed end date 31 Oct.", meta:"SoLP 2023–2028 · levy decision pending", url:"https://www.newcastle.gov.uk/services/licences-and-permits/licensing-act-2003-pages/licensing-act-2003-statement-licensing"},
+  {name:"Liverpool", dir:"loosening", detail:"All CIPs removed in 2021. SoLP renewal now ten months overdue with no consultation live. If Newcastle revokes its levy, Liverpool becomes the last city outside London still charging one.", meta:"SoLP renewal 10 months overdue · WATCH", url:"https://liverpool.gov.uk/business/licences-and-permits/entertainment-and-alcohol-licences/premises-licence/new-applications/"},
   {name:"Brighton & Hove", dir:"mixed", detail:"CIZ replaced by City Safety Area — same map, softer presumption, safety-first matrix.", meta:"SoLP from 5 Jan 2026", url:"https://www.brighton-hove.gov.uk/business-and-trade/licensing-and-gambling/statement-licensing-policy-2026"},
-  {name:"Glasgow", dir:"stable", detail:"Overprovision areas in force under Licensing (Scotland) Act 2005 policy statement. New Night Time Economy Commission launched 13 Jul.", meta:"Policy 2023–2028 · Scots regime", url:"https://www.glasgow.gov.uk/article/8074/Licensing-Policy-Statement"},
-  {name:"Edinburgh", dir:"loosening", detail:"Overprovision policy scrapped 5–3 (Jun 2025) — Old Town, Princes St, Tollcross, Leith St opened up.", meta:"Scots regime · contested vote", url:"https://www.edinburgh.gov.uk/licences-permits/edinburghs-licensing-board"}
+  {name:"Glasgow", dir:"stable", detail:"Overprovision areas in force under the Licensing (Scotland) Act 2005 policy statement. The Local Licensing Forum is now reviewing city-centre hours and the overprovision approach (report 8 Sep) — advisory; the Board sets policy.", meta:"Policy 2023–2028 · Scots regime", url:"https://www.glasgow.gov.uk/article/8074/Licensing-Policy-Statement"},
+  {name:"Edinburgh", dir:"loosening", detail:"Overprovision policy scrapped 5–3 (Jun 2025) — eight localities opened up: Old Town, Princes St, Leith St, Tollcross, Dean Village, Southside, Canongate, Dumbiedykes.", meta:"Scots regime · contested vote", url:"https://www.edinburgh.gov.uk/licences-permits/edinburghs-licensing-board"}
 ];
 
 const CLIPS = [
-  {tag:"Levy", date:"24 Jul 26", text:"Camden extends its Late Night Levy to late-night refreshment premises — free opt-out via minor variation until 31 August.", source:"Popall"},
-  {tag:"Venue", date:"24 Jul 26", text:"Music Venue Properties acquires The Pipeline, Brighton — its tenth grassroots venue taken into community ownership.", source:"MVP"},
-  {tag:"Policy", date:"14 Jul 26", text:"Government launches 'Turn It Up: Our Plan for Music' — a long-term plan for UK music welcomed by the NTIA.", source:"Popall"},
-  {tag:"NTE", date:"13 Jul 26", text:"Glasgow launches its Night Time Economy Commission, chaired by Sub Club's Mike Grieve, plus Scotland's first council NTE Manager post.", source:"NTIA"},
-  {tag:"Consult", date:"3 Jul 26", text:"Home Office consults on longer premises closure orders — responses close 31 July.", source:"LGL"},
-  {tag:"Policy", date:"1 Jul 26", text:"Institute of Licensing publishes guidance for licensing teams facing local government reorganisation.", source:"IoL"},
-  {tag:"Court", date:"16 Apr 26", text:"First-ever conviction for false statements under the Licensing Act 2003 — AI-written objections to Heaven's licence.", source:"11KBW"},
-  {tag:"Closure", date:"29 Mar 26", text:"Corsica Studios closes for S106 refurb after 25 years at Elephant & Castle.", source:"Corsica"}
+  {tag:"Policy", date:"17 Sep 26", text:"Westminster adopts its Statement of Licensing Policy 2026 at Full Council on 16 September; in force 1 October. West End CIZ reduced; core hours become 'reference points rather than fixed limits'.", source:"Popall"},
+  {tag:"Policy", date:"9 Sep 26", text:"Khan on Westminster's revised papers: 'They would rather see nightlife die than thrive.' Committee papers show 81% of respondents disagreed with the cumulative impact zone.", source:"MA"},
+  {tag:"Policy", date:"9 Sep 26", text:"Cllr Tim Barnes asks City Hall to reverse cuts to the Met's licensing team, extend night buses and introduce a Thursday Night Tube.", source:"MA"},
+  {tag:"CIA", date:"22 Jul 26", text:"Bristol consults on keeping its city-centre CIA, which expires 7 March 2027. Closes 14 October. Not linked from the council's licensing-policy page.", source:"BCC"},
+  {tag:"Levy", date:"22 Sep 26", text:"Newcastle's consultation on revoking the Late Night Levy closes. Full Council decides next; proposed end date 31 October.", source:"LTN"},
+  {tag:"Review", date:"11 Sep 26", text:"The Mistress of Mayfair keeps its licence after review: no dancefloor, earlier Sunday finish, identifiable door staff.", source:"Drinks Business"},
+  {tag:"Licence", date:"9 Sep 26", text:"Trisha's on Greek Street granted 2am inside the West End CIZ, over a Met objection.", source:"Standard"},
+  {tag:"Rules", date:"16 Sep 26", text:"Order laid raising TENs to 20 notices and 26 days a year per premises, from 1 January 2027 subject to Parliament.", source:"Popall"},
+  {tag:"Rules", date:"11 Sep 26", text:"Digital proof of age for alcohol sales now in force — voluntary, certified Digital Verification Services only.", source:"Popall"},
+  {tag:"Scotland", date:"18 Sep 26", text:"Glasgow's Local Licensing Forum reviews city-centre pub hours and the Board's approach to overprovision.", source:"DRAM"}
 ];
 
 const DIR_COLOR = {tightening:"#c1493f", stable:"#8ea3ab", loosening:"#3d7a52", mixed:"#d6547e"};
@@ -375,21 +377,21 @@ const DIR_COLOR = {tightening:"#c1493f", stable:"#8ea3ab", loosening:"#3d7a52", 
 const GB_DOTS = [
   {name:"Glasgow",    dir:"stable",    x:60,  y:170, lx:-9, ly:3},
   {name:"Edinburgh",  dir:"loosening", x:100, y:162, lx:9,  ly:3},
-  {name:"Newcastle",  dir:"stable",    x:168, y:220, lx:9,  ly:3},
+  {name:"Newcastle",  dir:"mixed",     x:168, y:220, lx:9,  ly:3},
   {name:"Leeds",      dir:"tightening",x:170, y:286, lx:9,  ly:3},
   {name:"Manchester", dir:"stable",    x:142, y:304, lx:-12,ly:14},
   {name:"Liverpool",  dir:"loosening", x:110, y:308, lx:-14,ly:-8},
-  {name:"Birmingham", dir:"stable",    x:156, y:358, lx:9,  ly:3},
+  {name:"Birmingham", dir:"loosening", x:156, y:358, lx:9,  ly:3},
   {name:"Bristol",    dir:"stable",    x:126, y:418, lx:-10, ly:14},
   {name:"Brighton",   dir:"mixed",     x:222, y:456, lx:-8, ly:14},
-  {name:"London",     dir:"tightening",x:236, y:418, lx:9,  ly:3}
+  {name:"London",     dir:"mixed",     x:236, y:418, lx:9,  ly:3}
 ];
 const LDN_DOTS = [
   {name:"Camden",       dir:"mixed",     x:200, y:80},
   {name:"Islington",    dir:"stable",    x:232, y:64},
   {name:"Hackney",      dir:"tightening",x:262, y:84},
   {name:"Tower Hamlets",dir:"mixed",     x:262, y:110},
-  {name:"Westminster",  dir:"tightening",x:196, y:126},
+  {name:"Westminster",  dir:"mixed",     x:196, y:126},
   {name:"Lambeth",      dir:"stable",    x:204, y:162},
   {name:"Southwark",    dir:"tightening",x:238, y:148}
 ];
